@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const base_speed_light_world: float = 12.0
-const run_addon_1: float = 4.0
+const base_speed_light_world: float = 14.0
+const run_addon_1: float = 8.0
 
 var moving = false
 
