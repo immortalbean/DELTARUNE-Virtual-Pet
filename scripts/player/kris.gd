@@ -3,6 +3,8 @@ extends CharacterBody2D
 const base_speed_light_world: float = 420.0
 const run_addon_1: float = 240.0
 
+const max_form: int = 3
+
 var moving = false
 
 @export var form: int = 0
@@ -11,6 +13,10 @@ var direction = "down"
 
 var sprite
 @onready var window_manager = $window_manager
+@onready var sprite_spawner = $sprite_spawner
+
+func _ready() -> void:
+	sprite_spawner.spawn()
 
 func _physics_process(_delta: float) -> void:
 	var current_speed = base_speed_light_world
@@ -46,4 +52,11 @@ func _physics_process(_delta: float) -> void:
 		else:
 			sprite.play("idle_" + direction)
 	
-	
+	if Input.is_action_just_pressed("next"):
+		form += 1
+		form = clampi(form, 0, max_form)
+		sprite_spawner.spawn()
+	if Input.is_action_just_pressed("previous"):
+		form -= 1
+		form = clampi(form, 0, max_form)
+		sprite_spawner.spawn()

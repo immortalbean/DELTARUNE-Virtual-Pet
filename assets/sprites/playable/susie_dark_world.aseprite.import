@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dj6qihnjnsjpf"
+path="res://.godot/imported/susie_dark_world.aseprite-2ac2aea2823c7430c4e201148ce6610c.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/susie_dark_world.aseprite"
+dest_files=["res://.godot/imported/susie_dark_world.aseprite-2ac2aea2823c7430c4e201148ce6610c.res"]
+
+[params]
+

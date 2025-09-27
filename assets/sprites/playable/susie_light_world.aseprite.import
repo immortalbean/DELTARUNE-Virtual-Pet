@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://uuk15hl7t5pr"
+path="res://.godot/imported/susie_light_world.aseprite-40aa7f825a513ea5f9e9628b97fb95cb.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/susie_light_world.aseprite"
+dest_files=["res://.godot/imported/susie_light_world.aseprite-40aa7f825a513ea5f9e9628b97fb95cb.res"]
+
+[params]
+
