@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=4 uid="uid://cnsvbugcwh45j"]
+[gd_scene load_steps=18 format=4 uid="uid://cnsvbugcwh45j"]
 
 [ext_resource type="Script" uid="uid://d0paiphqijcfu" path="res://scripts/player/kris.gd" id="1_x4gd8"]
+[ext_resource type="Script" uid="uid://5sngy7cv8qj0" path="res://scripts/window_manager.gd" id="2_maqpo"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_clnxc"]
 _data = PackedByteArray("AAADAAUAAAABAAAATAAAAHIAAADwAwAAUklGRugDAABXRUJQVlA4TNsDAAAvS0AcEC9AEECSSAZ7jbzHNATZNvOZ6Iiud4JsmxFsUPeHucH8B+DnkEu6OpBca2/dRligAeXRAA5TQA6ZPSL+KsATuf9eSPygNK91RP8huG0jSWK6p/Ze9VS9QsKoyo1xD7+HMXkKB3OUxpsvzJRFsINagFWBZsFJVMrvpKgT/Da4lHJh9K4TB+7MyY4nOc5VsPpMseA5JnqexyJYZQSQDxtzzKaReeTB6ma/UAKb9sls1GTBgSFO2VEsBITONFgdZoUuWgEDbE+DVQrleowBL1kwbXrkPrmHrVsF6zyNk4oEKqI6qWoSHM9s1DrQejzXBogkwUHtChGvFahVZwGAqpIHS6tddNjqmC3oGDEc/KNh3UbSNGc6P2utr98cTFXR22N6H1Fv1JkFzJZH0H6mrz68D49NOTj47PQO1TFtaEFVDg5V9YI2A6YaCnLABEwU4MhhKjZSuu0i4AC3fXZGxSIAmMpKiU8YOaB8kBADBGFEYoLGAE1KNE1RJiu+IP8PjgUsIKQQj50qBFMy/Ak3DHJ/VO/muMeHATTLkOSZs6jkiGRNyWHJoxBTVk3rKCeaN12ISiRN14BT8qYLUYms6bojj9BFyckMxznKkxbBiaPs82lmkbHnechQ9hMHRPx5RnIeT7bjw0yj46kixexAeDH7hZJ8ieA024MdiAw8uxl9uQQotu8BzPJ1l6kU2yEy0wMp6WJ8MGaMhpNUIgcCH2bREJskTBCO7EBvwySB0ACMDpe3ygDWKlyD2hUiPkp66FCEgNhU1SmzS/gn2xYXnU20vm7flLltKgEFyNv22YUK2JZ4374vNL1zyoPU9koeSXBtPfrsldWY0nrlYDaSar+Ag3tdQ6K2BBK89ztDohiY7QQIYDsBA0AACIMKtajwlXTKumlK0i9AEoBk1USWEimgkQMLPlOUQhygRwc0F1IoalZQiq8JBXvSFDODeIUgV/kT436Lqsjy7Va9EOzchDB6ceucmzxCUpAHU1MOFJWleJICLvhdOAVZCniSJtx1fw78jjEcJ9R/g+d5yH07Psz0d3zZfo/dDL+Dme3yOwCa0Ut8CoeZquTSBmsoCCQ5lE43h6oKvNXAa+8tNESaBotLqz3Y6phtqg29dg7+0VC1VQ3mTOdnrfX1OwnmquntMb2PqDfqpADyvn0P7Wf66sP78NiUg4PaXoNex7ShBVU5eGq11b7Saq0dKkBISVEKwGx32xNAQCnFVLCCqRjDmKmsPilR3FYo4HCkOy2y2H2hFI8FDoVGmkVBb6Mz9RsAehet8+u6RCUZDd+6JxSIxHvCpU8uD6CLBgEA")
@@ -158,7 +159,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_maqpo"]
-size = Vector2(14, 6)
+size = Vector2(60, 72)
 
 [node name="kris" type="CharacterBody2D"]
 script = ExtResource("1_x4gd8")
@@ -189,6 +190,11 @@ metadata/_aseprite_wizard_config_ = {
 metadata/_aseprite_wizard_source_file_hash_ = "ab8f07c89af2b3b4cb4f52855001bff4"
 
 [node name="hitbox" type="CollisionShape2D" parent="."]
-position = Vector2(0, 15)
+position = Vector2(2, 36)
 shape = SubResource("RectangleShape2D_maqpo")
 debug_color = Color(0.33598018, 0.6224829, 0, 0.41960785)
+
+[node name="camera" type="Camera2D" parent="."]
+
+[node name="window_manager" type="Node" parent="."]
+script = ExtResource("2_maqpo")
