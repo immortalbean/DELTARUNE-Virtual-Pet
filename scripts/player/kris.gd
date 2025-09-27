@@ -8,6 +8,7 @@ var moving = false
 var direction = "down"
 
 @onready var sprite = $sprite
+@onready var window_manager = $window_manager
 
 func _physics_process(_delta: float) -> void:
 	var current_speed = base_speed_light_world
@@ -16,6 +17,7 @@ func _physics_process(_delta: float) -> void:
 	moving = false
 	
 	velocity = Vector2.ZERO
+
 	if Input.is_action_pressed("down"):
 		velocity.y = current_speed
 		moving = true
@@ -34,9 +36,12 @@ func _physics_process(_delta: float) -> void:
 		direction = "left"
 	move_and_slide()
 	
-	
-	if moving:
-		sprite.play("walk_" + direction)
+	if window_manager.dragging:
+		sprite.play("drag")
 	else:
-		sprite.play("idle_" + direction)
+		if moving:
+			sprite.play("walk_" + direction)
+		else:
+			sprite.play("idle_" + direction)
+	
 	
