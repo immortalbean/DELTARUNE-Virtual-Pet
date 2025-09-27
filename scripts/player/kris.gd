@@ -3,7 +3,7 @@ extends CharacterBody2D
 const base_speed_light_world: float = 420.0
 const run_addon_1: float = 240.0
 
-const max_form: int = 3
+const max_form: int = 4
 
 var moving = false
 
