@@ -14,6 +14,8 @@ config/name="Kris"
 run/main_scene="uid://cnsvbugcwh45j"
 config/features=PackedStringArray("4.5", "Forward Plus")
 run/max_fps=30
+boot_splash/bg_color=Color(0, 0, 0, 0)
+boot_splash/show_image=false
 config/icon="uid://kgbfoqwojkew"
 
 [display]
