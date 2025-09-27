@@ -18,7 +18,7 @@ config/icon="res://icon.svg"
 [display]
 
 window/size/viewport_width=152
-window/size/viewport_height=152
+window/size/viewport_height=190
 window/size/initial_position_type=4
 window/size/resizable=false
 window/size/borderless=true
@@ -94,3 +94,4 @@ renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0, 0, 0, 0)
 viewport/transparent_background=true
+2d/snap/snap_2d_transforms_to_pixel=true

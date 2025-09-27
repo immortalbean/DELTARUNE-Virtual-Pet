@@ -5,9 +5,11 @@ const run_addon_1: float = 240.0
 
 var moving = false
 
+@export var form: int = 0
+
 var direction = "down"
 
-@onready var sprite = $sprite
+var sprite
 @onready var window_manager = $window_manager
 
 func _physics_process(_delta: float) -> void:
