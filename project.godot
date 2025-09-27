@@ -10,10 +10,10 @@ config_version=5
 
 [application]
 
-config/name="deltarune"
+config/name="Kris"
 config/features=PackedStringArray("4.5", "Forward Plus")
 run/max_fps=30
-config/icon="res://icon.svg"
+config/icon="uid://kgbfoqwojkew"
 
 [display]
 
