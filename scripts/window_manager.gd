@@ -11,12 +11,13 @@ func _ready() -> void:
 	
 	kris = get_parent()
 func _process(_delta: float) -> void:
-
-	DisplayServer.window_set_position(get_parent().position)
 	if Input.is_action_just_pressed("mouse_click"):
-		mouse_offset = kris.get_global_mouse_position() - kris.position
+		mouse_offset = kris.position - kris.get_global_mouse_position()
 		dragging = true
 	if Input.is_action_just_released("mouse_click"):
 		dragging = false
 	if dragging:
 		kris.position = kris.get_global_mouse_position() + mouse_offset
+	kris.position.x = clamp(kris.position.x, 0.0, float(DisplayServer.screen_get_size().x - DisplayServer.window_get_size().x))
+	kris.position.y = clamp(kris.position.y, 0.0, float(DisplayServer.screen_get_size().y - DisplayServer.window_get_size().y))
+	DisplayServer.window_set_position(kris.position)
