@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cossff318ux3x"
+path="res://.godot/imported/noelle_light_world.aseprite-54e875c34f5d124dc5bddd70ccc5e4eb.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/noelle_light_world.aseprite"
+dest_files=["res://.godot/imported/noelle_light_world.aseprite-54e875c34f5d124dc5bddd70ccc5e4eb.res"]
+
+[params]
+
