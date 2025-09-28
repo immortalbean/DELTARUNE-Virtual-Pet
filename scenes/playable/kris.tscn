@@ -29,6 +29,7 @@ debug_color = Color(0.33598018, 0.6224829, 0, 0.41960785)
 
 [node name="window_manager" type="Node" parent="."]
 script = ExtResource("2_maqpo")
+names = PackedStringArray("Kris", "Kris", "Susie", "Susie", "Ralsei", "Ralsei", "Berdly", "Berdly", "Noelle", "Noelle")
 
 [node name="sprite_spawner" type="Node" parent="."]
 script = ExtResource("3_t5y3x")

@@ -17,6 +17,7 @@ var sprite
 
 func _ready() -> void:
 	sprite_spawner.spawn()
+	window_manager.set_window_name(form)
 
 func _physics_process(_delta: float) -> void:
 	var current_speed = base_speed_light_world
@@ -55,7 +56,9 @@ func _physics_process(_delta: float) -> void:
 		form += 1
 		form = clampi(form, 0, max_form)
 		sprite_spawner.spawn()
+		window_manager.set_window_name(form)
 	if Input.is_action_just_pressed("previous"):
 		form -= 1
 		form = clampi(form, 0, max_form)
 		sprite_spawner.spawn()
+		window_manager.set_window_name(form)

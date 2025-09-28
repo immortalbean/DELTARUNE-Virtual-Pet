@@ -4,6 +4,7 @@ var mouse_offset: Vector2 = Vector2.ZERO
 var dragging = false
 var kris: CharacterBody2D
 var time: float = 0.0
+@export var names: PackedStringArray
 
 func _ready() -> void:
 	var _rid = get_tree().get_root().get_viewport_rid()
@@ -23,3 +24,5 @@ func _process(delta: float) -> void:
 	kris.position.x = clamp(kris.position.x, 0.0, float(DisplayServer.screen_get_size().x - DisplayServer.window_get_size().x))
 	kris.position.y = clamp(kris.position.y, 0.0, float(DisplayServer.screen_get_size().y - DisplayServer.window_get_size().y))
 	DisplayServer.window_set_position(kris.position)
+func set_window_name(form: int):
+	DisplayServer.window_set_title(names[form])
