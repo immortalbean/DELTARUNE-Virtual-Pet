@@ -1,0 +1,195 @@
+[gd_scene load_steps=16 format=4 uid="uid://bpvu21st00v5s"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_eua3e"]
+_data = PackedByteArray("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")
+size_override = Vector2(156, 176)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2n6pk"]
+atlas = SubResource("PortableCompressedTexture2D_eua3e")
+region = Rect2(0, 132, 39, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avqq4"]
+atlas = SubResource("PortableCompressedTexture2D_eua3e")
+region = Rect2(0, 0, 39, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hja7w"]
+atlas = SubResource("PortableCompressedTexture2D_eua3e")
+region = Rect2(117, 0, 39, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2h7be"]
+atlas = SubResource("PortableCompressedTexture2D_eua3e")
+region = Rect2(78, 44, 39, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mu0h"]
+atlas = SubResource("PortableCompressedTexture2D_eua3e")
+region = Rect2(39, 88, 39, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q3jxk"]
+atlas = SubResource("PortableCompressedTexture2D_eua3e")
+region = Rect2(39, 0, 39, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fo63"]
+atlas = SubResource("PortableCompressedTexture2D_eua3e")
+region = Rect2(78, 0, 39, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4anyi"]
+atlas = SubResource("PortableCompressedTexture2D_eua3e")
+region = Rect2(0, 44, 39, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46n5a"]
+atlas = SubResource("PortableCompressedTexture2D_eua3e")
+region = Rect2(39, 44, 39, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tptvq"]
+atlas = SubResource("PortableCompressedTexture2D_eua3e")
+region = Rect2(117, 44, 39, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mxp2"]
+atlas = SubResource("PortableCompressedTexture2D_eua3e")
+region = Rect2(0, 88, 39, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpypt"]
+atlas = SubResource("PortableCompressedTexture2D_eua3e")
+region = Rect2(78, 88, 39, 44)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0qn2e"]
+atlas = SubResource("PortableCompressedTexture2D_eua3e")
+region = Rect2(117, 88, 39, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b133p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2n6pk")
+}],
+"loop": true,
+"name": &"drag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avqq4")
+}],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hja7w")
+}],
+"loop": true,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2h7be")
+}],
+"loop": true,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mu0h")
+}],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avqq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q3jxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avqq4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fo63")
+}],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hja7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4anyi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hja7w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46n5a")
+}],
+"loop": true,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2h7be")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tptvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2h7be")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8mxp2")
+}],
+"loop": true,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mu0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpypt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mu0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0qn2e")
+}],
+"loop": true,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[node name="sprite" type="AnimatedSprite2D"]
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_b133p")
+animation = &"walk_down"
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"output_section": false,
+"pending_changes": {},
+"slice_section": false
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/sprites/playable/berdly_light_world.aseprite",
+"source_uid": 4349040536218447555
+}
+metadata/_aseprite_wizard_source_file_hash_ = "5d65cc4320bf04d1becb69c76abef882"

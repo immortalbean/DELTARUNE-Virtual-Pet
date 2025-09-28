@@ -3,7 +3,7 @@ extends CharacterBody2D
 const base_speed_light_world: float = 420.0
 const run_addon_1: float = 240.0
 
-const max_form: int = 5
+var max_form: int
 
 var moving = false
 
@@ -23,7 +23,6 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("run"):
 		current_speed += run_addon_1
 	moving = false
-	
 	velocity = Vector2.ZERO
 
 	if Input.is_action_pressed("down"):

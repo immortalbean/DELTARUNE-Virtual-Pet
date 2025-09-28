@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://b27ycd63rlvyx"
+path="res://.godot/imported/berdly_light_world.aseprite-7a17dda0f674b0b5a116dff595c5db49.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/berdly_light_world.aseprite"
+dest_files=["res://.godot/imported/berdly_light_world.aseprite-7a17dda0f674b0b5a116dff595c5db49.res"]
+
+[params]
+
