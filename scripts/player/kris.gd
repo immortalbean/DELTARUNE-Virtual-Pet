@@ -28,6 +28,8 @@ func _ready() -> void:
 	window_manager.set_window_name(form)
 
 func _physics_process(_delta: float) -> void:
+	if Input.is_action_just_pressed("menu"):
+		ai_mode = not ai_mode
 	if ai_mode:
 		handle_random_movement()
 	else:
