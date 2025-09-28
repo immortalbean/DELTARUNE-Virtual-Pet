@@ -6,6 +6,14 @@ const run_addon_1: float = 240.0
 var max_form: int
 
 var moving = false
+var ai_mode = true
+var directions = [
+	"down",
+	"up",
+	"right",
+	"left"
+]
+var move_timer = 0
 
 @export var form: int = 0
 
@@ -20,6 +28,31 @@ func _ready() -> void:
 	window_manager.set_window_name(form)
 
 func _physics_process(_delta: float) -> void:
+	if ai_mode:
+		handle_random_movement()
+	else:
+		handle_human_input()
+	move_and_slide()
+	
+	if window_manager.dragging:
+		sprite.play("drag")
+	else:
+		if moving:
+			sprite.play("walk_" + direction)
+		else:
+			sprite.play("idle_" + direction)
+	
+	if Input.is_action_just_pressed("next"):
+		form += 1
+		form = clampi(form, 0, max_form)
+		sprite_spawner.spawn()
+		window_manager.set_window_name(form)
+	if Input.is_action_just_pressed("previous"):
+		form -= 1
+		form = clampi(form, 0, max_form)
+		sprite_spawner.spawn()
+		window_manager.set_window_name(form)
+func handle_human_input():
 	var current_speed = base_speed_light_world
 	if Input.is_action_pressed("run"):
 		current_speed += run_addon_1
@@ -42,23 +75,25 @@ func _physics_process(_delta: float) -> void:
 		velocity.x = -current_speed
 		moving = true
 		direction = "left"
-	move_and_slide()
-	
-	if window_manager.dragging:
-		sprite.play("drag")
-	else:
-		if moving:
-			sprite.play("walk_" + direction)
+func handle_random_movement():
+	if move_timer <= 0:
+		if randi_range(0, 5) < 1:
+			moving = true
+			direction = directions.pick_random()
 		else:
-			sprite.play("idle_" + direction)
+			moving = false
+		move_timer = randi_range(20, 70)
 	
-	if Input.is_action_just_pressed("next"):
-		form += 1
-		form = clampi(form, 0, max_form)
-		sprite_spawner.spawn()
-		window_manager.set_window_name(form)
-	if Input.is_action_just_pressed("previous"):
-		form -= 1
-		form = clampi(form, 0, max_form)
-		sprite_spawner.spawn()
-		window_manager.set_window_name(form)
+	var current_speed = base_speed_light_world
+	
+	velocity = Vector2.ZERO
+	if moving:
+		if direction == "down":
+			velocity.y = current_speed
+		if direction == "up":
+			velocity.y = -current_speed
+		if direction == "right":
+			velocity.x = current_speed
+		if direction == "left":
+			velocity.x = -current_speed
+	move_timer -= 1
