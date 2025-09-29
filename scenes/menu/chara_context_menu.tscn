@@ -1,0 +1,111 @@
+[gd_scene load_steps=4 format=3 uid="uid://nsihc5nr3nox"]
+
+[ext_resource type="Script" uid="uid://b83vququs8yim" path="res://scripts/chara_context_menu.gd" id="1_4cfu1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wywd5"]
+bg_color = Color(0.14044744, 0.14044747, 0.14044738, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35156286, 0.35156295, 0.35156265, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cfu1"]
+bg_color = Color(0.16206557, 0.1620656, 0.16206554, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.35156286, 0.35156295, 0.35156265, 1)
+
+[node name="menu" type="Window"]
+oversampling_override = 1.0
+size = Vector2i(100, 64)
+wrap_controls = true
+exclusive = true
+unresizable = true
+borderless = true
+always_on_top = true
+popup_window = true
+sharp_corners = true
+script = ExtResource("1_4cfu1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 16.0
+grow_horizontal = 2
+theme_override_constants/separation = 0
+
+[node name="delete" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4cfu1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_wywd5")
+text = "Remove"
+
+[node name="next" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4cfu1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_wywd5")
+text = "Next character"
+
+[node name="previous" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4cfu1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_wywd5")
+text = "Previous character"
+
+[node name="exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4cfu1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wywd5")
+theme_override_styles/focus = SubResource("StyleBoxFlat_wywd5")
+text = "Exit menu"
+
+[connection signal="button_up" from="VBoxContainer/delete" to="." method="delete"]
+[connection signal="button_up" from="VBoxContainer/next" to="." method="next"]
+[connection signal="button_up" from="VBoxContainer/previous" to="." method="previous"]
+[connection signal="button_up" from="VBoxContainer/exit" to="." method="exit"]

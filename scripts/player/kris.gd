@@ -29,32 +29,27 @@ func _ready() -> void:
 	window_manager.set_window_name(form)
 
 func _physics_process(_delta: float) -> void:
-	if Input.is_action_just_pressed("menu"):
-		ai_mode = not ai_mode
-	if ai_mode:
-		handle_random_movement()
-	else:
-		handle_human_input()
-	move_and_slide()
-	
-	if window_manager.dragging:
-		sprite.play("drag")
-	else:
-		if moving:
-			sprite.play("walk_" + direction)
+	if not window_manager.menu_open:
+		if Input.is_action_just_pressed("menu"):
+			ai_mode = not ai_mode
+		if ai_mode:
+			handle_random_movement()
 		else:
-			sprite.play("idle_" + direction)
-	
-	if Input.is_action_just_pressed("next"):
-		form += 1
-		form = clampi(form, 0, max_form)
-		sprite_spawner.spawn()
-		window_manager.set_window_name(form)
-	if Input.is_action_just_pressed("previous"):
-		form -= 1
-		form = clampi(form, 0, max_form)
-		sprite_spawner.spawn()
-		window_manager.set_window_name(form)
+			handle_human_input()
+		move_and_slide()
+		
+		if window_manager.dragging:
+			sprite.play("drag")
+		else:
+			if moving:
+				sprite.play("walk_" + direction)
+			else:
+				sprite.play("idle_" + direction)
+		
+		if Input.is_action_just_pressed("next"):
+			change_form(1)
+		if Input.is_action_just_pressed("previous"):
+			change_form(-1)
 func handle_human_input():
 	var current_speed = base_speed_light_world
 	if Input.is_action_pressed("run"):
@@ -100,3 +95,8 @@ func handle_random_movement():
 		if direction == "left":
 			velocity.x = -current_speed
 	move_timer -= 1
+func change_form(amount: int):
+		form += amount
+		form = clampi(form, 0, max_form)
+		sprite_spawner.spawn()
+		window_manager.set_window_name(form)

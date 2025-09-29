@@ -1,7 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://cnsvbugcwh45j"]
+[gd_scene load_steps=16 format=3 uid="uid://cnsvbugcwh45j"]
 
 [ext_resource type="Script" uid="uid://d0paiphqijcfu" path="res://scripts/player/kris.gd" id="1_x4gd8"]
 [ext_resource type="Script" uid="uid://5sngy7cv8qj0" path="res://scripts/window_manager.gd" id="2_maqpo"]
+[ext_resource type="PackedScene" uid="uid://nsihc5nr3nox" path="res://scenes/menu/chara_context_menu.tscn" id="3_0vowx"]
 [ext_resource type="Script" uid="uid://cobvl26ylkmti" path="res://scripts/sprite_spawner.gd" id="3_t5y3x"]
 [ext_resource type="PackedScene" uid="uid://b3k4xkkd20cgn" path="res://scenes/sprites/kris_light_world.tscn" id="4_8iqg6"]
 [ext_resource type="PackedScene" uid="uid://bcciegb3fal3i" path="res://scenes/sprites/kris_dark_world.tscn" id="5_o8gs6"]
@@ -30,6 +31,7 @@ debug_color = Color(0.33598018, 0.6224829, 0, 0.41960785)
 [node name="window_manager" type="Node" parent="."]
 script = ExtResource("2_maqpo")
 names = PackedStringArray("Kris", "Kris", "Susie", "Susie", "Ralsei", "Ralsei", "Berdly", "Berdly", "Noelle", "Noelle")
+context_menu = ExtResource("3_0vowx")
 
 [node name="sprite_spawner" type="Node" parent="."]
 script = ExtResource("3_t5y3x")
