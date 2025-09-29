@@ -1,24 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://nsihc5nr3nox"]
+[gd_scene load_steps=5 format=3 uid="uid://nsihc5nr3nox"]
 
 [ext_resource type="Script" uid="uid://b83vququs8yim" path="res://scripts/chara_context_menu.gd" id="1_4cfu1"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4t3i"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.040168993, 0.040131256, 0.09758026, 1)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wywd5"]
-bg_color = Color(0.14044744, 0.14044747, 0.14044738, 1)
+bg_color = Color(0.2677911, 0.29989824, 0.33659962, 1)
 border_width_left = 1
-border_width_top = 1
-border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.35156286, 0.35156295, 0.35156265, 1)
+border_color = Color(0.12156863, 0.12156863, 0.22745098, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cfu1"]
-bg_color = Color(0.16206557, 0.1620656, 0.16206554, 1)
+bg_color = Color(0.3836549, 0.42468897, 0.47460878, 1)
 border_width_left = 1
-border_width_top = 1
-border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.35156286, 0.35156295, 0.35156265, 1)
+border_color = Color(0.08884931, 0.088821135, 0.17536527, 1)
 
 [node name="menu" type="Window"]
+transparent_bg = true
 oversampling_override = 1.0
 size = Vector2i(100, 64)
 wrap_controls = true
@@ -26,18 +34,21 @@ exclusive = true
 unresizable = true
 borderless = true
 always_on_top = true
+transparent = true
 popup_window = true
 sharp_corners = true
 script = ExtResource("1_4cfu1")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 16.0
-grow_horizontal = 2
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 100.0
+offset_bottom = 64.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v4t3i")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="delete" type="Button" parent="VBoxContainer"]
+[node name="delete" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 10
@@ -54,7 +65,7 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wywd5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_wywd5")
 text = "Remove"
 
-[node name="next" type="Button" parent="VBoxContainer"]
+[node name="next" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 10
@@ -71,7 +82,7 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wywd5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_wywd5")
 text = "Next character"
 
-[node name="previous" type="Button" parent="VBoxContainer"]
+[node name="previous" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 10
@@ -88,7 +99,7 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wywd5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_wywd5")
 text = "Previous character"
 
-[node name="exit" type="Button" parent="VBoxContainer"]
+[node name="exit" type="Button" parent="PanelContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 10
@@ -105,7 +116,7 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wywd5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_wywd5")
 text = "Exit menu"
 
-[connection signal="button_up" from="VBoxContainer/delete" to="." method="delete"]
-[connection signal="button_up" from="VBoxContainer/next" to="." method="next"]
-[connection signal="button_up" from="VBoxContainer/previous" to="." method="previous"]
-[connection signal="button_up" from="VBoxContainer/exit" to="." method="exit"]
+[connection signal="button_up" from="PanelContainer/VBoxContainer/delete" to="." method="delete"]
+[connection signal="button_up" from="PanelContainer/VBoxContainer/next" to="." method="next"]
+[connection signal="button_up" from="PanelContainer/VBoxContainer/previous" to="." method="previous"]
+[connection signal="button_up" from="PanelContainer/VBoxContainer/exit" to="." method="exit"]
