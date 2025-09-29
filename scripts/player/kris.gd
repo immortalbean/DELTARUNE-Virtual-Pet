@@ -24,6 +24,7 @@ var sprite
 @onready var sprite_spawner = $sprite_spawner
 
 func _ready() -> void:
+	form = randi_range(0, max_form)
 	sprite_spawner.spawn()
 	window_manager.set_window_name(form)
 
