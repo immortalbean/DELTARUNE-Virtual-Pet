@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://c0nvfj4yrjwnx"
+path="res://.godot/imported/spamton.aseprite-b031a639cb0ab8317a6ee80fd995c124.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/spamton.aseprite"
+dest_files=["res://.godot/imported/spamton.aseprite-b031a639cb0ab8317a6ee80fd995c124.res"]
+
+[params]
+
