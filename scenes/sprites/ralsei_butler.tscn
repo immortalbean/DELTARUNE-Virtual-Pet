@@ -1,52 +1,52 @@
 [gd_scene load_steps=14 format=4 uid="uid://cqnmrlkveejds"]
 
 [sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_02ukb"]
-_data = PackedByteArray("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")
-size_override = Vector2(156, 132)
+_data = PackedByteArray("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")
+size_override = Vector2(140, 126)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_syw77"]
 atlas = SubResource("PortableCompressedTexture2D_02ukb")
-region = Rect2(78, 88, 39, 44)
+region = Rect2(70, 84, 35, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i24i2"]
 atlas = SubResource("PortableCompressedTexture2D_02ukb")
-region = Rect2(0, 0, 39, 44)
+region = Rect2(0, 0, 35, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_280vv"]
 atlas = SubResource("PortableCompressedTexture2D_02ukb")
-region = Rect2(117, 0, 39, 44)
+region = Rect2(105, 0, 35, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tdgx5"]
 atlas = SubResource("PortableCompressedTexture2D_02ukb")
-region = Rect2(39, 44, 39, 44)
+region = Rect2(35, 42, 35, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v1jjm"]
 atlas = SubResource("PortableCompressedTexture2D_02ukb")
-region = Rect2(117, 44, 39, 44)
+region = Rect2(105, 42, 35, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_73bbr"]
 atlas = SubResource("PortableCompressedTexture2D_02ukb")
-region = Rect2(39, 0, 39, 44)
+region = Rect2(35, 0, 35, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_obnii"]
 atlas = SubResource("PortableCompressedTexture2D_02ukb")
-region = Rect2(78, 0, 39, 44)
+region = Rect2(70, 0, 35, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p3cmj"]
 atlas = SubResource("PortableCompressedTexture2D_02ukb")
-region = Rect2(0, 44, 39, 44)
+region = Rect2(0, 42, 35, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bej0l"]
 atlas = SubResource("PortableCompressedTexture2D_02ukb")
-region = Rect2(78, 44, 39, 44)
+region = Rect2(70, 42, 35, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e3smq"]
 atlas = SubResource("PortableCompressedTexture2D_02ukb")
-region = Rect2(0, 88, 39, 44)
+region = Rect2(0, 84, 35, 42)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r1bif"]
 atlas = SubResource("PortableCompressedTexture2D_02ukb")
-region = Rect2(39, 88, 39, 44)
+region = Rect2(35, 84, 35, 42)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1335s"]
 animations = [{
@@ -184,4 +184,4 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://assets/sprites/playable/ralsei_butler.aseprite",
 "source_uid": 5054540915040527651
 }
-metadata/_aseprite_wizard_source_file_hash_ = "fb0061420ed4c5e4e577605ee995d7a1"
+metadata/_aseprite_wizard_source_file_hash_ = "220226b31918bcf3c2d857597c89a19b"
