@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dbch32cglhn51"
+path="res://.godot/imported/napstablook_headphones.aseprite-62a6d7c51c134c3023f75dc4e556b9a6.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/napstablook_headphones.aseprite"
+dest_files=["res://.godot/imported/napstablook_headphones.aseprite-62a6d7c51c134c3023f75dc4e556b9a6.res"]
+
+[params]
+

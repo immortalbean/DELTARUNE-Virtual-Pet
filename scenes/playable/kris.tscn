@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://cnsvbugcwh45j"]
+[gd_scene load_steps=23 format=3 uid="uid://cnsvbugcwh45j"]
 
 [ext_resource type="Script" uid="uid://d0paiphqijcfu" path="res://scripts/player/kris.gd" id="1_x4gd8"]
 [ext_resource type="Script" uid="uid://5sngy7cv8qj0" path="res://scripts/window_manager.gd" id="2_maqpo"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://brbu8ee03nyaq" path="res://scenes/sprites/spamton.tscn" id="16_6jh55"]
 [ext_resource type="PackedScene" uid="uid://c2lno7gsvg1fe" path="res://scenes/sprites/queen.tscn" id="19_al16h"]
 [ext_resource type="PackedScene" uid="uid://corje2jh4pest" path="res://scenes/sprites/tenna.tscn" id="20_3s8o6"]
+[ext_resource type="PackedScene" uid="uid://ypc0gmfpr1ur" path="res://scenes/sprites/napstablook_headphones.tscn" id="21_ew1t8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_maqpo"]
 size = Vector2(64, 72)
@@ -36,9 +37,9 @@ debug_color = Color(0.33598018, 0.6224829, 0, 0.41960785)
 
 [node name="window_manager" type="Node" parent="."]
 script = ExtResource("2_maqpo")
-names = PackedStringArray("Kris", "Kris", "Kris", "Susie", "Susie", "Susie", "Ralsei", "Ralsei", "Ralsei", "Berdly", "Berdly", "Noelle", "Noelle", "Spamton", "Queen", "Tenna")
+names = PackedStringArray("Kris", "Kris", "Kris", "Susie", "Susie", "Susie", "Ralsei", "Ralsei", "Ralsei", "Berdly", "Berdly", "Noelle", "Noelle", "Spamton", "Queen", "Tenna", "Napstablook")
 context_menu = ExtResource("3_0vowx")
 
 [node name="sprite_spawner" type="Node" parent="."]
 script = ExtResource("3_t5y3x")
-scenes = Array[PackedScene]([ExtResource("4_8iqg6"), ExtResource("5_o8gs6"), ExtResource("7_7wkpq"), ExtResource("6_llqdb"), ExtResource("7_rih5q"), ExtResource("9_orcni"), ExtResource("8_o8gs6"), ExtResource("9_llqdb"), ExtResource("11_ufdf3"), ExtResource("10_rih5q"), ExtResource("11_a6wac"), ExtResource("12_1snc6"), ExtResource("13_fo5dx"), ExtResource("16_6jh55"), ExtResource("19_al16h"), ExtResource("20_3s8o6")])
+scenes = Array[PackedScene]([ExtResource("4_8iqg6"), ExtResource("5_o8gs6"), ExtResource("7_7wkpq"), ExtResource("6_llqdb"), ExtResource("7_rih5q"), ExtResource("9_orcni"), ExtResource("8_o8gs6"), ExtResource("9_llqdb"), ExtResource("11_ufdf3"), ExtResource("10_rih5q"), ExtResource("11_a6wac"), ExtResource("12_1snc6"), ExtResource("13_fo5dx"), ExtResource("16_6jh55"), ExtResource("19_al16h"), ExtResource("20_3s8o6"), ExtResource("21_ew1t8")])
