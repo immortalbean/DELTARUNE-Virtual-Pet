@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cncweh2pf4xy2"
+path="res://.godot/imported/queen.aseprite-f056acd906648ed0efaf20e9a2e07894.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/queen.aseprite"
+dest_files=["res://.godot/imported/queen.aseprite-f056acd906648ed0efaf20e9a2e07894.res"]
+
+[params]
+

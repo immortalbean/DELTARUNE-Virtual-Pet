@@ -47,3 +47,5 @@ func _process(delta: float) -> void:
 				add_child(menu)
 func set_window_name(form: int):
 	DisplayServer.window_set_title(names[form])
+func set_window_size(size: Vector2i):
+	DisplayServer.window_set_size(size)

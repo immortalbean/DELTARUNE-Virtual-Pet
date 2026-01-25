@@ -19,7 +19,7 @@ var move_timer = 0
 
 var direction = "down"
 
-var sprite
+var sprite: AnimatedSprite2D
 @onready var window_manager = $window_manager
 @onready var sprite_spawner = $sprite_spawner
 
@@ -27,6 +27,7 @@ func _ready() -> void:
 	form = randi_range(0, max_form)
 	sprite_spawner.spawn()
 	window_manager.set_window_name(form)
+	change_form(0)
 
 func _physics_process(_delta: float) -> void:
 	if not window_manager.menu_open:
@@ -100,3 +101,7 @@ func change_form(amount: int):
 		form = clampi(form, 0, max_form)
 		sprite_spawner.spawn()
 		window_manager.set_window_name(form)
+		var sprite_size = sprite.sprite_frames.get_frame_texture("idle_down", 0).get_size()
+		sprite_size.x *= sprite.scale.x
+		sprite_size.y *= sprite.scale.y
+		window_manager.set_window_size(Vector2i(sprite_size))

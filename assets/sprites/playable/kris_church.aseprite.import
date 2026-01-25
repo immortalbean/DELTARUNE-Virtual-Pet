@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://by1peey2h53nq"
+path="res://.godot/imported/kris_church.aseprite-831406e3774c69c93bcb91dc0113e179.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/kris_church.aseprite"
+dest_files=["res://.godot/imported/kris_church.aseprite-831406e3774c69c93bcb91dc0113e179.res"]
+
+[params]
+

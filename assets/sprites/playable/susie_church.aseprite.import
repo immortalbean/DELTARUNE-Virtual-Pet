@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cwvujs2n41ceh"
+path="res://.godot/imported/susie_church.aseprite-9fc2e32a8c05e9a4b59021c74e9d4e89.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/susie_church.aseprite"
+dest_files=["res://.godot/imported/susie_church.aseprite-9fc2e32a8c05e9a4b59021c74e9d4e89.res"]
+
+[params]
+
