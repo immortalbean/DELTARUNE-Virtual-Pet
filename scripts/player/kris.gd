@@ -29,7 +29,7 @@ func _ready() -> void:
 	window_manager.set_window_name(form)
 	change_form(0)
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if not window_manager.menu_open:
 		if Input.is_action_just_pressed("menu"):
 			ai_mode = not ai_mode
@@ -51,6 +51,7 @@ func _physics_process(_delta: float) -> void:
 			change_form(1)
 		if Input.is_action_just_pressed("previous"):
 			change_form(-1)
+	window_manager.tick(delta)
 func handle_human_input():
 	var current_speed = base_speed_light_world
 	if Input.is_action_pressed("run"):

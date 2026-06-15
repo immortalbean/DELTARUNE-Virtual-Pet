@@ -18,7 +18,7 @@ func _ready() -> void:
 		randi_range(0, DisplayServer.screen_get_size().y)
 	)
 	
-func _process(delta: float) -> void:
+func tick(delta: float) -> void:
 	if not menu_open:
 		time += delta
 		if Input.is_action_just_pressed("mouse_click"):
