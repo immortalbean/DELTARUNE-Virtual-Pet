@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://nsihc5nr3nox"]
+[gd_scene format=3 uid="uid://nsihc5nr3nox"]
 
 [ext_resource type="Script" uid="uid://b83vququs8yim" path="res://scripts/chara_context_menu.gd" id="1_4cfu1"]
 
@@ -25,7 +25,7 @@ border_width_left = 1
 border_width_bottom = 1
 border_color = Color(0.08884931, 0.088821135, 0.17536527, 1)
 
-[node name="menu" type="Window"]
+[node name="menu" type="Window" unique_id=1478147447]
 transparent_bg = true
 oversampling_override = 1.0
 size = Vector2i(100, 64)
@@ -40,16 +40,16 @@ popup_window = true
 sharp_corners = true
 script = ExtResource("1_4cfu1")
 
-[node name="PanelContainer" type="PanelContainer" parent="."]
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1673344549]
 offset_right = 100.0
 offset_bottom = 64.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_v4t3i")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=894390852]
 layout_mode = 2
 theme_override_constants/separation = 0
 
-[node name="delete" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="delete" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1944879772]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 10
@@ -66,7 +66,7 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wywd5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_wywd5")
 text = "Remove"
 
-[node name="next" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="next" type="Button" parent="PanelContainer/VBoxContainer" unique_id=760258165]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 10
@@ -83,7 +83,7 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wywd5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_wywd5")
 text = "Next character"
 
-[node name="previous" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="previous" type="Button" parent="PanelContainer/VBoxContainer" unique_id=2078775230]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 10
@@ -100,7 +100,7 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wywd5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_wywd5")
 text = "Previous character"
 
-[node name="exit" type="Button" parent="PanelContainer/VBoxContainer"]
+[node name="exit" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1674249495]
 layout_mode = 2
 size_flags_vertical = 0
 theme_override_font_sizes/font_size = 10
