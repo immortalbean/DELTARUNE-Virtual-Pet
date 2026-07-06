@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://b1nooqn4yg6m7"
+path="res://.godot/imported/seth.aseprite-295db8dee7d96614ab99dfa4602dcb6e.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/seth.aseprite"
+dest_files=["res://.godot/imported/seth.aseprite-295db8dee7d96614ab99dfa4602dcb6e.res"]
+
+[params]
+
