@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cornh1lmpcm1l"
+path="res://.godot/imported/green.aseprite-f2f9748b40bfc88f2a63b8ecab5ff64a.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/green.aseprite"
+dest_files=["res://.godot/imported/green.aseprite-f2f9748b40bfc88f2a63b8ecab5ff64a.res"]
+
+[params]
+
