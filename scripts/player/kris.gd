@@ -71,12 +71,12 @@ func handle_human_input():
 		direction = "left"
 func handle_random_movement():
 	if move_timer <= 0:
-		if randi_range(0, 5) < 1:
+		if randi_range(0, 4) < 1:
 			moving = true
 			direction = directions.pick_random()
 		else:
 			moving = false
-		move_timer = randi_range(20, 70)
+		move_timer = randi_range(50, 80)
 	
 	var current_speed = base_speed_light_world
 	
