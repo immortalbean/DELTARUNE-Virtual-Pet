@@ -29,11 +29,12 @@ func tick(delta: float) -> void:
 			dragging = false
 		if dragging:
 			var rounded_time = time * 180.0
-			kris.position = kris.get_global_mouse_position() + mouse_offset + (
+			var new_position = kris.get_global_mouse_position() + mouse_offset + (
 				Vector2(snapped(sin(deg_to_rad(rounded_time)) * 3.0, 1.0), snapped(sin(deg_to_rad(rounded_time * 0.9)) * 3.0, 1.0))
 				)
-		kris.position.x = clamp(kris.position.x, 0.0, float(DisplayServer.screen_get_size().x - DisplayServer.window_get_size().x))
-		kris.position.y = clamp(kris.position.y, 0.0, float(DisplayServer.screen_get_size().y - DisplayServer.window_get_size().y))
+			kris.launch_velocity = (new_position - kris.position) * 30.0
+			kris.position = new_position
+		bound_position()
 		DisplayServer.window_set_position(kris.position)
 		if Input.is_action_just_pressed("right_click"):
 			if has_node("menu"):
@@ -51,3 +52,20 @@ func set_window_name(form: int):
 	DisplayServer.window_set_title(names[form])
 func set_window_size(size: Vector2i):
 	DisplayServer.window_set_size(size)
+func bound_position() -> void:
+	#kris.position.x = clamp(kris.position.x, 0.0, float(DisplayServer.screen_get_size().x - DisplayServer.window_get_size().x))
+	#kris.position.y = clamp(kris.position.y, 0.0, float(DisplayServer.screen_get_size().y - DisplayServer.window_get_size().y))
+	if kris.position.x < 0.0:
+		kris.position.x = 0.0
+		kris.launch_velocity.x *= -1.0
+	var bound_x = float(DisplayServer.screen_get_size().x - DisplayServer.window_get_size().x)
+	if kris.position.x > bound_x:
+		kris.position.x = bound_x
+		kris.launch_velocity.x *= -1.0
+	if kris.position.y < 0.0:
+		kris.position.y = 0.0
+		kris.launch_velocity.y *= -1.0
+	var bound_y = float(DisplayServer.screen_get_size().y - DisplayServer.window_get_size().y)
+	if kris.position.y > bound_y:
+		kris.position.y = bound_y
+		kris.launch_velocity.y *= -1.0

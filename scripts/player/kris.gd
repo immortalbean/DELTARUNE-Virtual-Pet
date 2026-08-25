@@ -20,6 +20,8 @@ var move_timer = 0
 var direction = "down"
 
 var sprite: AnimatedSprite2D
+
+var launch_velocity: Vector2 = Vector2.ZERO
 @onready var window_manager = $window_manager
 @onready var sprite_spawner = $sprite_spawner
 
@@ -37,8 +39,10 @@ func _physics_process(delta: float) -> void:
 			handle_random_movement()
 		else:
 			handle_human_input()
+		if not window_manager.dragging:
+			velocity += launch_velocity
+			launch_velocity *= 0.7
 		move_and_slide()
-		
 		update_visuals()
 		
 		if Input.is_action_just_pressed("next"):
