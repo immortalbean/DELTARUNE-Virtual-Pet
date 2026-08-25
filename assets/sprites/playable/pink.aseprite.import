@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://d33mll717fmce"
+path="res://.godot/imported/pink.aseprite-6a4a65317635c3df46b1c4eb7f6ea2b9.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/pink.aseprite"
+dest_files=["res://.godot/imported/pink.aseprite-6a4a65317635c3df46b1c4eb7f6ea2b9.res"]
+
+[params]
+

@@ -1,0 +1,127 @@
+[gd_scene format=4 uid="uid://bfij3g8myikkt"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_fti3r"]
+_data = PackedByteArray("AAADAAUAAAABAAAAbAAAAEYAAAA0AwAAUklGRiwDAABXRUJQVlA4TCADAAAva0ARECcgECA8SfHfYkMgQHiR4L+NQIDwJFO0+Q8A8GfKgGJsW0EEiV+zAfCQBHh2AooBLO3PPyj5fBpnAojovwNJkqSkUMtzLWD4RPjLW3ylJMic9kpJzPMQfaMkNJV5yA8lTeWH/jwP0WlJbnM9IU3mITorAaa7HVWBPA/RPPHDTK3TZGJgooaHiaJ2kH2AmdCZqFngf7vTPOIK4gGzqcxxS/Sf4QJKQbn/+BTOYZqwJ6RCnuKQEsivXh63fkiU4kKSaQJZyBk9jR7hYOKjLThbYeLDFqKYZxKOBxYm59B1oX2sx5rSX0hoWZ6KlkPsLxKGNuhTAlI/gMf/2o2HPivNtJmU/yxNKYUAQIq7qilJoahKVE3Bto2L9ibyrHXncLBQmGqt7Bv4RQj4ECaj1lqY0PfIVFy1VquoZLqrfTLsQRmf1auQKiblrLfafMOHh17jTcyxGu+3bvwaIo6qPW8jxV5DTbWzGw86O6rZuZSPW1Ufitkjc8asKpwTU63NWQwT4tdekh7iDI5HCAP1rgYdOK7b4E7pYbhuLyXW2+5Qc6j1N2p1KfaQS7CTE+IQMpnt3X45ScCAP1yhAbQh9CFtDZCd8wmMcfb6IDBlbPnqUHPsKQTwxKCPmVaQSZx7IWGm/Ds4ahX7f6OyCWjD+fUbYhvdVDvRiWsSbIdiBKpqa0YDsEXAoDHD3mcVEv6BTebEV4h5TpM3aCrTfM1vWOdxTVXesKpMrfkNT9U0N5UX3DXJBzSv22hi4FGUJf8E0NXyC6i43+60tR9E/QXA6G9RXuYCSkG59xReZU9IhTzL25Bk6ry70MEEgBuXiHrVej8GxFFhOgtlBRz12TbpQzWUgEkzuETk2dlT/A7fAgkouPa6DLAQsPmpnE/IGpGsZiMpQ37L9eolsuRk2ZnCiDZ9KLLkw7JBRr4Pj7awQhrxUr65qa7RPjInANBl9BfCUe+6Sg7RIu7heqi1Ls0WQhymy6PYc9lZWtSs6uIO19KiBDjBlqwJlQihTL7SDxN4Yun61M2uJF6KWe24dUFNVSz5p5SFnwHjSMlPKT8RAA==")
+size_override = Vector2(108, 70)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m70tm"]
+atlas = SubResource("PortableCompressedTexture2D_fti3r")
+region = Rect2(36, 35, 36, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stg7t"]
+atlas = SubResource("PortableCompressedTexture2D_fti3r")
+region = Rect2(0, 0, 36, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f506g"]
+atlas = SubResource("PortableCompressedTexture2D_fti3r")
+region = Rect2(36, 0, 36, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7ykc"]
+atlas = SubResource("PortableCompressedTexture2D_fti3r")
+region = Rect2(72, 0, 36, 35)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6fxav"]
+atlas = SubResource("PortableCompressedTexture2D_fti3r")
+region = Rect2(0, 35, 36, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vximw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m70tm")
+}],
+"loop": 1,
+"name": &"drag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stg7t")
+}],
+"loop": 1,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f506g")
+}],
+"loop": 1,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7ykc")
+}],
+"loop": 1,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fxav")
+}],
+"loop": 1,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_stg7t")
+}],
+"loop": 1,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f506g")
+}],
+"loop": 1,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7ykc")
+}],
+"loop": 1,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6fxav")
+}],
+"loop": 1,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[node name="sprite" type="AnimatedSprite2D" unique_id=300494957]
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_vximw")
+animation = &"idle_down"
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"output_section": false,
+"pending_changes": {},
+"slice_section": false
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/sprites/playable/lancer.aseprite",
+"source_uid": 4666590434423979546
+}
+metadata/_aseprite_wizard_source_file_hash_ = "155a0ca343b40d3a31ea095285c73a22"

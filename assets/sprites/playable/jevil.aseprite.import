@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://v501v3qebbab"
+path="res://.godot/imported/jevil.aseprite-808a243ba78ff2eba38d75c66a161b01.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/jevil.aseprite"
+dest_files=["res://.godot/imported/jevil.aseprite-808a243ba78ff2eba38d75c66a161b01.res"]
+
+[params]
+
