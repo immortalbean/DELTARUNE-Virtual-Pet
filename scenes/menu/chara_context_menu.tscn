@@ -25,10 +25,26 @@ border_width_left = 1
 border_width_bottom = 1
 border_color = Color(0.08884931, 0.088821135, 0.17536527, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2edi4"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.7372549)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+corner_detail = 6
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g4v7s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yf5fn"]
+
 [node name="menu" type="Window" unique_id=1478147447]
 transparent_bg = true
 oversampling_override = 1.0
-size = Vector2i(100, 64)
+size = Vector2i(100, 103)
 wrap_controls = true
 exclusive = true
 unresizable = true
@@ -117,7 +133,26 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_wywd5")
 theme_override_styles/focus = SubResource("StyleBoxFlat_wywd5")
 text = "Exit menu"
 
+[node name="scale_label" type="Label" parent="PanelContainer/VBoxContainer" unique_id=1070312213]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Scale:"
+horizontal_alignment = 1
+
+[node name="scale" type="HSlider" parent="PanelContainer/VBoxContainer" unique_id=1185309959]
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_2edi4")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_g4v7s")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_yf5fn")
+min_value = 1.0
+max_value = 6.0
+value = 4.0
+rounded = true
+tick_count = 6
+ticks_position = 3
+
 [connection signal="button_up" from="PanelContainer/VBoxContainer/delete" to="." method="delete"]
 [connection signal="button_up" from="PanelContainer/VBoxContainer/next" to="." method="next"]
 [connection signal="button_up" from="PanelContainer/VBoxContainer/previous" to="." method="previous"]
 [connection signal="button_up" from="PanelContainer/VBoxContainer/exit" to="." method="exit"]
+[connection signal="value_changed" from="PanelContainer/VBoxContainer/scale" to="." method="scale"]

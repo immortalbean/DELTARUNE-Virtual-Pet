@@ -39,13 +39,7 @@ func _physics_process(delta: float) -> void:
 			handle_human_input()
 		move_and_slide()
 		
-		if window_manager.dragging:
-			sprite.play("drag")
-		else:
-			if moving:
-				sprite.play("walk_" + direction)
-			else:
-				sprite.play("idle_" + direction)
+		update_visuals()
 		
 		if Input.is_action_just_pressed("next"):
 			change_form(1)
@@ -98,11 +92,24 @@ func handle_random_movement():
 			velocity.x = -current_speed
 	move_timer -= 1
 func change_form(amount: int):
-		form += amount
-		form = clampi(form, 0, max_form)
-		sprite_spawner.spawn()
-		window_manager.set_window_name(form)
-		var sprite_size = sprite.sprite_frames.get_frame_texture("idle_down", 0).get_size()
-		sprite_size.x *= sprite.scale.x
-		sprite_size.y *= sprite.scale.y
-		window_manager.set_window_size(Vector2i(sprite_size))
+	form += amount
+	form = clampi(form, 0, max_form)
+	sprite_spawner.spawn()
+	update_visuals()
+	window_manager.set_window_name(form)
+	update_window_size()
+func update_window_size():
+	var sprite_size = sprite.sprite_frames.get_frame_texture("idle_down", 0).get_size()
+	sprite_size *= window_manager.scale
+	window_manager.set_window_size(Vector2i(sprite_size))
+func update_visuals() -> void:
+	if sprite.scale.x != window_manager.scale:
+		sprite.scale = Vector2.ONE * window_manager.scale
+		update_window_size()
+	if window_manager.dragging:
+		sprite.play("drag")
+	else:
+		if moving:
+			sprite.play("walk_" + direction)
+		else:
+			sprite.play("idle_" + direction)

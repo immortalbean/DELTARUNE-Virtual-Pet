@@ -5,6 +5,7 @@ var dragging = false
 var kris: CharacterBody2D
 var time: float = 0.0
 var menu_open: bool = false
+var scale: float = 4.0
 @export var names: PackedStringArray
 @export var context_menu: PackedScene
 
@@ -45,6 +46,7 @@ func tick(delta: float) -> void:
 				menu.position = Vector2i(kris.get_global_mouse_position()) + DisplayServer.window_get_size() / 2
 				menu.kris = kris
 				add_child(menu)
+				menu.prep()
 func set_window_name(form: int):
 	DisplayServer.window_set_title(names[form])
 func set_window_size(size: Vector2i):
