@@ -3,7 +3,7 @@ extends Window
 var kris: CharacterBody2D = null
 var window_manager: Node = null
 
-@onready var scale_slider = $PanelContainer/VBoxContainer/scale
+@onready var scale_slider = $PanelContainer/VBoxContainer/scale_panel/scale
 
 func prep() -> void:
 	scale_slider.value = window_manager.scale

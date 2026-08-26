@@ -1,0 +1,67 @@
+[gd_resource type="Theme" format=3 uid="uid://da8ntgqda0yrs"]
+
+[ext_resource type="Texture2D" uid="uid://qa22bqgg4ya7" path="res://assets/sprites/ui/grabber.png" id="1_hengn"]
+[ext_resource type="FontFile" uid="uid://cr6io85yjaj4l" path="res://assets/fonts/font.otf" id="1_nqp7p"]
+[ext_resource type="Texture2D" uid="uid://d3td5lycrh4k" path="res://assets/sprites/ui/tick.png" id="2_srknj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqp7p"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hengn"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.49, 0.14999998, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3cw1y"]
+bg_color = Color(1, 0.49803922, 0.15294118, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3v6km"]
+draw_center = false
+border_width_left = 1
+border_width_top = 2
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(1, 0.49803922, 0.15294118, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_srknj"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.49803922, 0.15294118, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_227t4"]
+bg_color = Color(0, 0, 0, 1)
+
+[resource]
+default_font = ExtResource("1_nqp7p")
+default_font_size = 12
+Button/colors/font_color = Color(1, 0.49803922, 0.15294118, 1)
+Button/styles/focus = SubResource("StyleBoxFlat_nqp7p")
+Button/styles/hover = SubResource("StyleBoxFlat_nqp7p")
+Button/styles/normal = SubResource("StyleBoxFlat_hengn")
+Button/styles/pressed = SubResource("StyleBoxFlat_nqp7p")
+HSlider/icons/grabber = ExtResource("1_hengn")
+HSlider/icons/grabber_disabled = ExtResource("1_hengn")
+HSlider/icons/grabber_highlight = ExtResource("1_hengn")
+HSlider/icons/tick = ExtResource("2_srknj")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_3cw1y")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_3cw1y")
+HSlider/styles/slider = SubResource("StyleBoxFlat_3v6km")
+Label/colors/font_color = Color(1, 0.49803922, 0.15294118, 1)
+Panel/styles/panel = SubResource("StyleBoxFlat_srknj")
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_227t4")
