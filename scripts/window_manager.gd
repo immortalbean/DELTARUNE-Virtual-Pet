@@ -25,8 +25,10 @@ func tick(delta: float) -> void:
 		if Input.is_action_just_pressed("mouse_click"):
 			mouse_offset = kris.position - kris.get_global_mouse_position()
 			dragging = true
+			Input.set_default_cursor_shape(Input.CursorShape.CURSOR_MOVE)
 		if Input.is_action_just_released("mouse_click"):
 			dragging = false
+			Input.set_default_cursor_shape(Input.CursorShape.CURSOR_ARROW)
 		if dragging:
 			var rounded_time = time * 180.0
 			var new_position = kris.get_global_mouse_position() + mouse_offset + (

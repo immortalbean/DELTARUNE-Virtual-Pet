@@ -68,6 +68,7 @@ theme_override_constants/separation = 0
 [node name="delete" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1944879772]
 layout_mode = 2
 size_flags_vertical = 0
+mouse_default_cursor_shape = 2
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_wywd5")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_wywd5")
@@ -85,6 +86,7 @@ text = "Remove"
 [node name="next" type="Button" parent="PanelContainer/VBoxContainer" unique_id=760258165]
 layout_mode = 2
 size_flags_vertical = 0
+mouse_default_cursor_shape = 2
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_wywd5")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_wywd5")
@@ -102,6 +104,7 @@ text = "Next character"
 [node name="previous" type="Button" parent="PanelContainer/VBoxContainer" unique_id=2078775230]
 layout_mode = 2
 size_flags_vertical = 0
+mouse_default_cursor_shape = 2
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_wywd5")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_wywd5")
@@ -119,6 +122,7 @@ text = "Previous character"
 [node name="exit" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1674249495]
 layout_mode = 2
 size_flags_vertical = 0
+mouse_default_cursor_shape = 2
 theme_override_font_sizes/font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_wywd5")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_wywd5")
@@ -141,6 +145,7 @@ horizontal_alignment = 1
 
 [node name="scale" type="HSlider" parent="PanelContainer/VBoxContainer" unique_id=1185309959]
 layout_mode = 2
+mouse_default_cursor_shape = 2
 theme_override_styles/slider = SubResource("StyleBoxFlat_2edi4")
 theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_g4v7s")
 theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_yf5fn")
