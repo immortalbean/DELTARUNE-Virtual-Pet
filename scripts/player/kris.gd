@@ -41,7 +41,8 @@ func _physics_process(delta: float) -> void:
 			handle_human_input()
 		if not window_manager.dragging:
 			velocity += launch_velocity
-			launch_velocity *= 0.7
+			launch_velocity *= 0.9
+			launch_velocity.y += abs(launch_velocity.x / 30.0)
 		move_and_slide()
 		update_visuals()
 		
