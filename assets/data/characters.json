@@ -90,7 +90,7 @@
 		"emotes": ["dance"]
 	},
 	{
-		"sprite": "res://scenes/sprites/napstablook.tscn",
+		"sprite": "res://scenes/sprites/napstablook_headphones.tscn",
 		"name": "Napstablook",
 		"sound": "default",
 		"emotes": []

@@ -15,7 +15,10 @@ var directions = [
 ]
 var move_timer = 0
 
+var emote = ""
+
 @export var form: int = 0
+@export var info: Node
 
 var direction = "down"
 
@@ -52,6 +55,7 @@ func _physics_process(delta: float) -> void:
 			change_form(-1)
 	window_manager.tick(delta)
 func handle_human_input():
+	emote = ""
 	var current_speed = base_speed_light_world
 	if Input.is_action_pressed("run"):
 		current_speed += run_addon_1
@@ -76,9 +80,14 @@ func handle_human_input():
 		direction = "left"
 func handle_random_movement():
 	if move_timer <= 0:
-		if randi_range(0, 4) < 1:
+		emote = ""
+		var rand := randi_range(0, 16)
+		if rand < 4:
 			moving = true
 			direction = directions.pick_random()
+		elif rand < 6 and len(info.emotes[form]):
+			moving = false
+			emote = info.emotes[form].pick_random()
 		else:
 			moving = false
 		move_timer = randi_range(50, 80)
@@ -114,7 +123,10 @@ func update_visuals() -> void:
 	if window_manager.dragging:
 		sprite.play("drag")
 	else:
-		if moving:
-			sprite.play("walk_" + direction)
+		if emote:
+			sprite.play(emote)
 		else:
-			sprite.play("idle_" + direction)
+			if moving:
+				sprite.play("walk_" + direction)
+			else:
+				sprite.play("idle_" + direction)

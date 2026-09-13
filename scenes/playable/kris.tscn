@@ -5,40 +5,13 @@
 [ext_resource type="Script" uid="uid://5sngy7cv8qj0" path="res://scripts/window_manager.gd" id="2_maqpo"]
 [ext_resource type="PackedScene" uid="uid://nsihc5nr3nox" path="res://scenes/menu/chara_context_menu.tscn" id="3_0vowx"]
 [ext_resource type="Script" uid="uid://cobvl26ylkmti" path="res://scripts/sprite_spawner.gd" id="3_t5y3x"]
-[ext_resource type="PackedScene" uid="uid://b3k4xkkd20cgn" path="res://scenes/sprites/kris_light_world.tscn" id="4_8iqg6"]
-[ext_resource type="PackedScene" uid="uid://bcciegb3fal3i" path="res://scenes/sprites/kris_dark_world.tscn" id="5_o8gs6"]
-[ext_resource type="PackedScene" uid="uid://crw718qgqiumc" path="res://scenes/sprites/susie_light_world.tscn" id="6_llqdb"]
-[ext_resource type="PackedScene" uid="uid://bcvone22kgh1n" path="res://scenes/sprites/kris_church.tscn" id="7_7wkpq"]
-[ext_resource type="PackedScene" uid="uid://cigyix6pxai4h" path="res://scenes/sprites/susie_dark_world.tscn" id="7_rih5q"]
-[ext_resource type="PackedScene" uid="uid://ce3jd7xeqmovy" path="res://scenes/sprites/ralsei_hat.tscn" id="8_o8gs6"]
-[ext_resource type="PackedScene" uid="uid://coacwswjew1ih" path="res://scenes/sprites/ralsei_hatless.tscn" id="9_llqdb"]
-[ext_resource type="PackedScene" uid="uid://rj1x22rw1an2" path="res://scenes/sprites/susie_church.tscn" id="9_orcni"]
-[ext_resource type="PackedScene" uid="uid://bpvu21st00v5s" path="res://scenes/sprites/berdly_light_world.tscn" id="10_rih5q"]
-[ext_resource type="PackedScene" uid="uid://bqmbxppg01gdb" path="res://scenes/sprites/berdly_dark_world.tscn" id="11_a6wac"]
-[ext_resource type="PackedScene" uid="uid://cqnmrlkveejds" path="res://scenes/sprites/ralsei_butler.tscn" id="11_ufdf3"]
-[ext_resource type="PackedScene" uid="uid://c0llo322aylva" path="res://scenes/sprites/noelle_light_world.tscn" id="12_1snc6"]
-[ext_resource type="PackedScene" uid="uid://4oju0vou6kjd" path="res://scenes/sprites/noelle_dark_world.tscn" id="13_fo5dx"]
-[ext_resource type="PackedScene" uid="uid://bfij3g8myikkt" path="res://scenes/sprites/lancer.tscn" id="14_u7gki"]
-[ext_resource type="PackedScene" uid="uid://brbu8ee03nyaq" path="res://scenes/sprites/spamton.tscn" id="16_6jh55"]
-[ext_resource type="PackedScene" uid="uid://c2lno7gsvg1fe" path="res://scenes/sprites/queen.tscn" id="19_al16h"]
-[ext_resource type="PackedScene" uid="uid://dhuyk68su6fyh" path="res://scenes/sprites/jevil.tscn" id="19_srfko"]
-[ext_resource type="PackedScene" uid="uid://corje2jh4pest" path="res://scenes/sprites/tenna.tscn" id="20_3s8o6"]
-[ext_resource type="PackedScene" uid="uid://ypc0gmfpr1ur" path="res://scenes/sprites/napstablook_headphones.tscn" id="21_ew1t8"]
-[ext_resource type="PackedScene" uid="uid://b6aq3j6a1h1jl" path="res://scenes/sprites/aqua.tscn" id="22_jegsr"]
-[ext_resource type="PackedScene" uid="uid://cqvy6vqqd80be" path="res://scenes/sprites/seth.tscn" id="23_83tax"]
-[ext_resource type="PackedScene" uid="uid://b7b6dj84oolqn" path="res://scenes/sprites/orange.tscn" id="24_2npaw"]
-[ext_resource type="PackedScene" uid="uid://cn6yojxhoop1j" path="res://scenes/sprites/green.tscn" id="25_ae7jc"]
-[ext_resource type="PackedScene" uid="uid://cm0dvcw4enrc3" path="res://scenes/sprites/yellow.tscn" id="26_cfax4"]
-[ext_resource type="PackedScene" uid="uid://h6rmoe20ucmt" path="res://scenes/sprites/blue.tscn" id="27_ro8i5"]
-[ext_resource type="PackedScene" uid="uid://b6bvao8r1qjas" path="res://scenes/sprites/flowery.tscn" id="28_hvwp2"]
-[ext_resource type="PackedScene" uid="uid://dkro0r0m34gj8" path="res://scenes/sprites/pink.tscn" id="30_57t6e"]
-[ext_resource type="PackedScene" uid="uid://idnxtwny8xaf" path="res://scenes/sprites/gerson.tscn" id="32_y7goj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_maqpo"]
 size = Vector2(64, 72)
 
-[node name="kris" type="CharacterBody2D" unique_id=551256782]
+[node name="kris" type="CharacterBody2D" unique_id=551256782 node_paths=PackedStringArray("info")]
 script = ExtResource("1_x4gd8")
+info = NodePath("info_loader")
 
 [node name="hitbox" type="CollisionShape2D" parent="." unique_id=857281640]
 position = Vector2(0, 36)
@@ -50,11 +23,11 @@ debug_color = Color(0.33598018, 0.6224829, 0, 0.41960785)
 [node name="info_loader" type="Node" parent="." unique_id=1765882284]
 script = ExtResource("2_haf5q")
 
-[node name="window_manager" type="Node" parent="." unique_id=127042655]
+[node name="window_manager" type="Node" parent="." unique_id=127042655 node_paths=PackedStringArray("info")]
 script = ExtResource("2_maqpo")
-names = PackedStringArray("Kris", "Kris", "Kris", "Susie", "Susie", "Susie", "Ralsei", "Ralsei", "Ralsei", "Lancer", "Berdly", "Berdly", "Noelle", "Noelle", "Jevil", "Spamton", "Queen", "Tenna", "Napstablook", "Aqua", "Seth", "Orange", "Green", "Yellow", "Blue", "Flowery", "Pink", "Old Man")
+info = NodePath("../info_loader")
 context_menu = ExtResource("3_0vowx")
 
-[node name="sprite_spawner" type="Node" parent="." unique_id=2102094587]
+[node name="sprite_spawner" type="Node" parent="." unique_id=2102094587 node_paths=PackedStringArray("info")]
 script = ExtResource("3_t5y3x")
-scenes = Array[PackedScene]([ExtResource("4_8iqg6"), ExtResource("5_o8gs6"), ExtResource("7_7wkpq"), ExtResource("6_llqdb"), ExtResource("7_rih5q"), ExtResource("9_orcni"), ExtResource("8_o8gs6"), ExtResource("9_llqdb"), ExtResource("11_ufdf3"), ExtResource("14_u7gki"), ExtResource("10_rih5q"), ExtResource("11_a6wac"), ExtResource("12_1snc6"), ExtResource("13_fo5dx"), ExtResource("19_srfko"), ExtResource("16_6jh55"), ExtResource("19_al16h"), ExtResource("20_3s8o6"), ExtResource("21_ew1t8"), ExtResource("22_jegsr"), ExtResource("23_83tax"), ExtResource("24_2npaw"), ExtResource("25_ae7jc"), ExtResource("26_cfax4"), ExtResource("27_ro8i5"), ExtResource("28_hvwp2"), ExtResource("30_57t6e"), ExtResource("32_y7goj")])
+info = NodePath("../info_loader")
