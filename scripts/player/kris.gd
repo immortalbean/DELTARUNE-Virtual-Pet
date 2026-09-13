@@ -18,7 +18,6 @@ var move_timer = 0
 var emote = ""
 
 @export var form: int = 0
-@export var info: Node
 
 var direction = "down"
 
@@ -27,7 +26,8 @@ var sprite: AnimatedSprite2D
 var launch_velocity: Vector2 = Vector2.ZERO
 @onready var window_manager = $window_manager
 @onready var sprite_spawner = $sprite_spawner
-
+@onready var info = $info_loader
+@onready var sounds = $sounds
 func _ready() -> void:
 	form = randi_range(0, max_form)
 	sprite_spawner.spawn()
@@ -80,18 +80,16 @@ func handle_human_input():
 		direction = "left"
 func handle_random_movement():
 	if move_timer <= 0:
+		move_timer = randi_range(50, 80)
 		emote = ""
 		var rand := randi_range(0, 16)
 		if rand < 4:
 			moving = true
 			direction = directions.pick_random()
 		elif rand < 6 and len(info.emotes[form]):
-			moving = false
-			emote = info.emotes[form].pick_random()
+			rand_emote()
 		else:
 			moving = false
-		move_timer = randi_range(50, 80)
-	
 	var current_speed = base_speed_light_world
 	
 	velocity = Vector2.ZERO
@@ -110,6 +108,7 @@ func change_form(amount: int):
 	form = clampi(form, 0, max_form)
 	sprite_spawner.spawn()
 	update_visuals()
+	sounds.stream = load(info.sounds[form])
 	window_manager.set_window_name(form)
 	update_window_size()
 func update_window_size():
@@ -130,3 +129,13 @@ func update_visuals() -> void:
 				sprite.play("walk_" + direction)
 			else:
 				sprite.play("idle_" + direction)
+func rand_emote() -> void:
+	moving = false
+	emote = info.emotes[form].pick_random()
+	if emote:
+		move_timer = int(
+				(float(sprite.sprite_frames.get_frame_count(emote)) /
+				float(sprite.sprite_frames.get_animation_speed(emote))
+				) * 30.0
+		)
+		move_timer = max(move_timer, 40)

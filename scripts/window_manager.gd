@@ -8,6 +8,7 @@ var menu_open: bool = false
 var scale: float = 4.0
 @export var info: Node
 @export var context_menu: PackedScene
+@export var sounds: AudioStreamPlayer
 
 func _ready() -> void:
 	var _rid = get_tree().get_root().get_viewport_rid()
@@ -25,6 +26,7 @@ func tick(delta: float) -> void:
 		if Input.is_action_just_pressed("mouse_click"):
 			mouse_offset = kris.position - kris.get_global_mouse_position()
 			dragging = true
+			sounds.play()
 			Input.set_default_cursor_shape(Input.CursorShape.CURSOR_MOVE)
 		if Input.is_action_just_released("mouse_click"):
 			dragging = false

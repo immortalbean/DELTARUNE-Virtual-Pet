@@ -2,7 +2,7 @@
 	{
 		"sprite": "res://scenes/sprites/kris_light_world.tscn",
 		"name": "Kris",
-		"sound": "default.wav",
+		"sound": "default",
 		"emotes": []
 	},
 	{

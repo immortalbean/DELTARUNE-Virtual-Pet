@@ -6,7 +6,7 @@
 [node name="menu" type="Window" unique_id=1478147447]
 transparent_bg = true
 oversampling_override = 1.0
-size = Vector2i(146, 151)
+size = Vector2i(146, 178)
 wrap_controls = true
 exclusive = true
 unresizable = true
@@ -45,6 +45,12 @@ size_flags_vertical = 0
 mouse_default_cursor_shape = 2
 text = "Previous character"
 
+[node name="emote" type="Button" parent="PanelContainer/VBoxContainer" unique_id=48899752]
+layout_mode = 2
+size_flags_vertical = 0
+mouse_default_cursor_shape = 2
+text = "Emote"
+
 [node name="exit" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1674249495]
 layout_mode = 2
 size_flags_vertical = 0
@@ -81,5 +87,6 @@ ticks_position = 3
 [connection signal="button_up" from="PanelContainer/VBoxContainer/delete" to="." method="delete"]
 [connection signal="button_up" from="PanelContainer/VBoxContainer/next" to="." method="next"]
 [connection signal="button_up" from="PanelContainer/VBoxContainer/previous" to="." method="previous"]
+[connection signal="button_up" from="PanelContainer/VBoxContainer/emote" to="." method="emote"]
 [connection signal="button_up" from="PanelContainer/VBoxContainer/exit" to="." method="exit"]
 [connection signal="value_changed" from="PanelContainer/VBoxContainer/scale_panel/scale" to="." method="scale"]

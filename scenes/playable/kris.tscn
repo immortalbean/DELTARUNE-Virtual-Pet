@@ -5,13 +5,13 @@
 [ext_resource type="Script" uid="uid://5sngy7cv8qj0" path="res://scripts/window_manager.gd" id="2_maqpo"]
 [ext_resource type="PackedScene" uid="uid://nsihc5nr3nox" path="res://scenes/menu/chara_context_menu.tscn" id="3_0vowx"]
 [ext_resource type="Script" uid="uid://cobvl26ylkmti" path="res://scripts/sprite_spawner.gd" id="3_t5y3x"]
+[ext_resource type="AudioStream" uid="uid://ly06je1o4nh" path="res://assets/sounds/default.wav" id="6_jq4yo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_maqpo"]
 size = Vector2(64, 72)
 
-[node name="kris" type="CharacterBody2D" unique_id=551256782 node_paths=PackedStringArray("info")]
+[node name="kris" type="CharacterBody2D" unique_id=551256782]
 script = ExtResource("1_x4gd8")
-info = NodePath("info_loader")
 
 [node name="hitbox" type="CollisionShape2D" parent="." unique_id=857281640]
 position = Vector2(0, 36)
@@ -23,11 +23,15 @@ debug_color = Color(0.33598018, 0.6224829, 0, 0.41960785)
 [node name="info_loader" type="Node" parent="." unique_id=1765882284]
 script = ExtResource("2_haf5q")
 
-[node name="window_manager" type="Node" parent="." unique_id=127042655 node_paths=PackedStringArray("info")]
+[node name="window_manager" type="Node" parent="." unique_id=127042655 node_paths=PackedStringArray("info", "sounds")]
 script = ExtResource("2_maqpo")
 info = NodePath("../info_loader")
 context_menu = ExtResource("3_0vowx")
+sounds = NodePath("../sounds")
 
 [node name="sprite_spawner" type="Node" parent="." unique_id=2102094587 node_paths=PackedStringArray("info")]
 script = ExtResource("3_t5y3x")
 info = NodePath("../info_loader")
+
+[node name="sounds" type="AudioStreamPlayer" parent="." unique_id=1155517607]
+stream = ExtResource("6_jq4yo")
