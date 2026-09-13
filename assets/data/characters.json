@@ -148,5 +148,11 @@
 		"name": "Old Man",
 		"sound": "default",
 		"emotes": []
+	},
+	{
+		"sprite": "res://scenes/sprites/knight.tscn",
+		"name": "Roaring Knight",
+		"sound": "knight",
+		"emotes": ["droop"]
 	}
 ]

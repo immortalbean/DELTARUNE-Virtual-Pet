@@ -8,8 +8,8 @@ var window_manager: Node = null
 @onready var emote_btn = $PanelContainer/VBoxContainer/emote
 
 func update_ui() -> void:
-	size = panel.size
 	emote_btn.visible = len(kris.info.emotes[kris.form]) > 0
+	size = panel.size
 func prep() -> void:
 	scale_slider.value = window_manager.scale
 	update_ui()

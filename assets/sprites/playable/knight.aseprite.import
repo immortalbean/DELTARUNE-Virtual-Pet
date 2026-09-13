@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://qa57oyl4xcs0"
+path="res://.godot/imported/knight.aseprite-8814c700061358aa2fb2fc46211d70f8.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/knight.aseprite"
+dest_files=["res://.godot/imported/knight.aseprite-8814c700061358aa2fb2fc46211d70f8.res"]
+
+[params]
+
