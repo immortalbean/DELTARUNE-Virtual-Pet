@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cnsvbugcwh45j"]
 
 [ext_resource type="Script" uid="uid://d0paiphqijcfu" path="res://scripts/player/kris.gd" id="1_x4gd8"]
+[ext_resource type="Script" uid="uid://lk8ts24hnbmg" path="res://scripts/info_loader.gd" id="2_haf5q"]
 [ext_resource type="Script" uid="uid://5sngy7cv8qj0" path="res://scripts/window_manager.gd" id="2_maqpo"]
 [ext_resource type="PackedScene" uid="uid://nsihc5nr3nox" path="res://scenes/menu/chara_context_menu.tscn" id="3_0vowx"]
 [ext_resource type="Script" uid="uid://cobvl26ylkmti" path="res://scripts/sprite_spawner.gd" id="3_t5y3x"]
@@ -45,6 +46,9 @@ shape = SubResource("RectangleShape2D_maqpo")
 debug_color = Color(0.33598018, 0.6224829, 0, 0.41960785)
 
 [node name="camera" type="Camera2D" parent="." unique_id=333049556]
+
+[node name="info_loader" type="Node" parent="." unique_id=1765882284]
+script = ExtResource("2_haf5q")
 
 [node name="window_manager" type="Node" parent="." unique_id=127042655]
 script = ExtResource("2_maqpo")
