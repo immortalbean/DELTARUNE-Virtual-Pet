@@ -15,7 +15,7 @@
 - Godot 4.7.x
     - The engine it runs on, obviously.
 - Knowledge in GDScript
-    - If you only plan on contributing characters, this is compeltely optional!
+    - If you only plan on contributing characters, this is completely optional!
     - Because this project was built entirely using GDScript, any code changes require knowledge of it.
 - Knowledge with JSON
     - Required if you want to make characters, as they are data driven.
@@ -29,3 +29,22 @@
 - All contributions in the changelogs will be credited to their author.
 - Additionally, there will be a list of contributors at the top of every devlog.
 - You are entirely free to fork this for your own Desktop Pet, just credit me!
+### Important File Paths:
+- `res://assets/data/characters.json`
+    - Where all the JSON character data is stored.
+    - This includes:
+        - "sprite" (String) - Stores the .tscn path of an `AnimatedSprite2D`.
+        - "name" (String) - The name of the window for that character. Defaults to "Kris".
+        - "sound" (String) - The .wav sound effect of the pet when grabbed relative to the SFX folder (see below).
+        - "emotes" (Array[String]) - An array of `StringName`s that refer to character animations.
+        - "inherits" - (int) special property, copies the data from an earlier character IDX. You can see an example on line 9 of the file.
+- `res://assets/sprites/playable/`
+    - Where all the .aseprite files for the characters are stored.
+    - You can see the necessary animations above. You can add custom animations for emotes.
+        - For an example of this, see `res://assets/sprites/playable/pink.aseprite`.
+- `res://scenes/sprites/`
+    - Where all the .tscn files for the characters are stored.
+    - Each should contain one `AnimatedSprite2D` node that has animations loaded through *Aseprite Wizard*.
+- `res://assets/sounds/`
+    - Where all the .wav files for the drag sounds are stored.
+    - See examples of this used in `characters.json`.
