@@ -9,10 +9,10 @@ func _enter_tree() -> void:
 	var json_str = FileAccess.open("res://assets/data/characters.json", FileAccess.READ).get_as_text()
 	var json_data = JSON.parse_string(json_str)
 	for i in json_data:
-		var name_temp
-		var scene_temp
-		var sound_temp
-		var emote_temp
+		var name_temp = "Kris"
+		var scene_temp = "res://scenes/sprites/kris_light_world.tscn"
+		var sound_temp = "default"
+		var emote_temp = []
 		if "inherits" in i:
 			var inherit = i["inherits"]
 			name_temp = json_data[inherit]["name"]
