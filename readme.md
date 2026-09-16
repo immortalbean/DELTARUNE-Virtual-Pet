@@ -11,6 +11,7 @@
 - Aseprite / Libreprite
     - Used to efficiently set up and organize character sprites.
     - Optional (though heavily recommended) if you just want to fork this, but required to contribute.
+	- If you do use one of these, save your file as a `.aseprite` file.
     - Use animation tags to label "idle_{direction}," "walk_{direction}," and "drag." You can also add your own as emotes.
 - Godot 4.7.x
     - The engine it runs on, obviously.
@@ -37,14 +38,17 @@
         - "name" (String) - The name of the window for that character. Defaults to "Kris".
         - "sound" (String) - The .wav sound effect of the pet when grabbed relative to the SFX folder (see below).
         - "emotes" (Array[String]) - An array of `StringName`s that refer to character animations.
-        - "inherits" - (int) special property, copies the data from an earlier character IDX. You can see an example on line 9 of the file.
+		- "sprite_flag" (String) - The .tscn scene of a visual property you can add to a character. Currently, there's only `"knight_flag"`.
+		- "inherits" - (int) special property, copies the data from an earlier character IDX. You can see an example on line 9 of the file.
 - `res://assets/sprites/playable/`
-    - Where all the .aseprite files for the characters are stored.
-    - You can see the necessary animations above. You can add custom animations for emotes.
-        - For an example of this, see `res://assets/sprites/playable/pink.aseprite`.
+	- Where all the .aseprite files for the characters are stored.
+	- You can see the necessary animations above. You can add custom animations for emotes.
+		- For an example of this, see `res://assets/sprites/playable/pink.aseprite`.
 - `res://scenes/sprites/`
-    - Where all the .tscn files for the characters are stored.
-    - Each should contain one `AnimatedSprite2D` node that has animations loaded through *Aseprite Wizard*.
+	- Where all the .tscn files for the characters are stored.
+	- Each should contain one `AnimatedSprite2D` node that has animations loaded through *Aseprite Wizard*.
 - `res://assets/sounds/`
-    - Where all the .wav files for the drag sounds are stored.
-    - See examples of this used in `characters.json`.
+	- Where all the .wav files for the drag sounds are stored.
+	- See examples of this used in `characters.json`.
+- `res://scenes/sprite_flags/`
+	- Where you can find all of the .tscn files relating to sprite flags. But only `knight_flag.tscn` is there currently.
