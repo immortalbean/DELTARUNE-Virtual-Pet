@@ -9,12 +9,14 @@ func _enter_tree() -> void:
 	var json_str = FileAccess.open("res://assets/data/characters.json", FileAccess.READ).get_as_text()
 	var json_data = JSON.parse_string(json_str)
 	for i in json_data:
-		var name_temp = "Kris"
+		# Added default values to avoid redundant JSON keys.
+		var name_temp = "Kris" # Even though this is here, Kris is still named in the JSON, don't remove that.
 		var scene_temp = "res://scenes/sprites/kris_light_world.tscn"
 		var sound_temp = "default"
 		var emote_temp = []
 		if "inherits" in i:
 			var inherit = i["inherits"]
+			# Switch to pre-existing lists from json data to allow layered inheritance.
 			name_temp = names[inherit]
 			scene_temp = scenes[inherit]
 			sound_temp = sounds[inherit]
@@ -29,5 +31,8 @@ func _enter_tree() -> void:
 			emote_temp = i["emotes"]
 		names.append(name_temp)
 		scenes.append(scene_temp)
-		sounds.append("res://assets/sounds/" + sound_temp + ".wav")
+		sounds.append(sound_temp)
 		emotes.append(emote_temp)
+	# Concatenate sound file path after all inheritance is set up.
+	for i in len(sounds):
+		sounds[i] = "res://assets/sounds/" + sounds[i] + ".wav"
