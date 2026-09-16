@@ -15,10 +15,10 @@ func _enter_tree() -> void:
 		var emote_temp = []
 		if "inherits" in i:
 			var inherit = i["inherits"]
-			name_temp = json_data[inherit]["name"]
-			scene_temp = json_data[inherit]["sprite"]
-			sound_temp = json_data[inherit]["sound"]
-			emote_temp = json_data[inherit]["emotes"]
+			name_temp = names[inherit]
+			scene_temp = scenes[inherit]
+			sound_temp = sounds[inherit]
+			emote_temp = emotes[inherit]
 		if "name" in i:
 			name_temp = i["name"]
 		if "sprite" in i:
