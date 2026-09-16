@@ -1,9 +1,7 @@
 [
 	{
 		"sprite": "res://scenes/sprites/kris_light_world.tscn",
-		"name": "Kris",
-		"sound": "default",
-		"emotes": []
+		"name": "Kris"
 	},
 	{
 		"inherits": 0,
@@ -31,7 +29,6 @@
 	{
 		"sprite": "res://scenes/sprites/ralsei_hat.tscn",
 		"name": "Ralsei",
-		"sound": "default",
 		"emotes": ["pose"]
 	},
 	{
@@ -41,13 +38,11 @@
 	},
 	{
 		"inherits": 6,
-		"sprite": "res://scenes/sprites/ralsei_butler.tscn",
-		"emotes": []
+		"sprite": "res://scenes/sprites/ralsei_butler.tscn"
 	},
 	{
 		"sprite": "res://scenes/sprites/berdly_light_world.tscn",
 		"name": "Berdly",
-		"sound": "default",
 		"emotes": ["pose"]
 	},
 	{
@@ -56,9 +51,7 @@
 	},
 	{
 		"sprite": "res://scenes/sprites/noelle_light_world.tscn",
-		"name": "Noelle",
-		"sound": "default",
-		"emotes": []
+		"name": "Noelle"
 	},
 	{
 		"inherits": 11,
@@ -68,8 +61,7 @@
 	{
 		"sprite": "res://scenes/sprites/jevil.tscn",
 		"name": "Jevil",
-		"sound": "jevil",
-		"emotes": []
+		"sound": "jevil"
 	},
 	{
 		"sprite": "res://scenes/sprites/spamton.tscn",
@@ -80,8 +72,7 @@
 	{
 		"sprite": "res://scenes/sprites/queen.tscn",
 		"name": "Queen",
-		"sound": "queen",
-		"emotes": []
+		"sound": "queen"
 	},
 	{
 		"sprite": "res://scenes/sprites/tenna.tscn",
@@ -91,51 +82,36 @@
 	},
 	{
 		"sprite": "res://scenes/sprites/napstablook_headphones.tscn",
-		"name": "Napstablook",
-		"sound": "default",
-		"emotes": []
+		"name": "Napstablook"
 	},
 	{
 		"sprite": "res://scenes/sprites/aqua.tscn",
-		"name": "Aqua",
-		"sound": "default",
-		"emotes": []
+		"name": "Aqua"
 	},
 	{
 		"sprite": "res://scenes/sprites/seth.tscn",
-		"name": "Seth",
-		"sound": "default",
-		"emotes": []
+		"name": "Seth"
 	},
 	{
 		"sprite": "res://scenes/sprites/orange.tscn",
-		"name": "Orange",
-		"sound": "default",
-		"emotes": []
+		"name": "Orange"
 	},
 	{
 		"sprite": "res://scenes/sprites/green.tscn",
-		"name": "Green",
-		"sound": "default",
-		"emotes": []
+		"name": "Green"
 	},
 	{
 		"sprite": "res://scenes/sprites/yellow.tscn",
-		"name": "Yellow",
-		"sound": "default",
-		"emotes": []
+		"name": "Yellow"
 	},
 	{
 		"sprite": "res://scenes/sprites/blue.tscn",
-		"name": "Blue",
-		"sound": "default",
-		"emotes": []
+		"name": "Blue"
 	},
 	{
 		"sprite": "res://scenes/sprites/flowery.tscn",
 		"name": "Flowery",
-		"sound": "flowery",
-		"emotes": []
+		"sound": "flowery"
 	},
 	{
 		"sprite": "res://scenes/sprites/pink.tscn",
@@ -145,9 +121,7 @@
 	},
 	{
 		"sprite": "res://scenes/sprites/gerson.tscn",
-		"name": "Old Man",
-		"sound": "default",
-		"emotes": []
+		"name": "Old Man"
 	},
 	{
 		"sprite": "res://scenes/sprites/knight.tscn",
