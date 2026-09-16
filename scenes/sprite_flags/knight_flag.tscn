@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b4eoyr23f0l1d"]
+
+[ext_resource type="Script" uid="uid://fc4pg2duy27f" path="res://scripts/special/knight.gd" id="1_mpdx0"]
+
+[node name="knight_special" type="Node2D" unique_id=621487662]
+show_behind_parent = true
+script = ExtResource("1_mpdx0")

@@ -11,3 +11,6 @@ func spawn():
 	sprite = node
 	owner.sprite = node
 	call_deferred("add_sibling", node)
+	if info.sprite_flags[owner.form]:
+		var flag_node = load(info.sprite_flags[owner.form]).instantiate()
+		node.call_deferred("add_child", flag_node)

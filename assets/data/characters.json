@@ -127,6 +127,7 @@
 		"sprite": "res://scenes/sprites/knight.tscn",
 		"name": "Roaring Knight",
 		"sound": "knight",
-		"emotes": ["droop"]
+		"emotes": ["droop"],
+		"sprite_flag": "knight_flag"
 	}
 ]
