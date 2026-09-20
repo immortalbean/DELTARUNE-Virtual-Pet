@@ -6,6 +6,7 @@ var sounds = []
 var emotes = []
 var sprite_flags = []
 
+# Use _enter_tree so that this data is loaded before any other nodes try reading it.
 func _enter_tree() -> void:
 	var json_str = FileAccess.open("res://assets/data/characters.json", FileAccess.READ).get_as_text()
 	var json_data = JSON.parse_string(json_str)

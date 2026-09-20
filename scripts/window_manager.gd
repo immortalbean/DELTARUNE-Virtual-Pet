@@ -11,6 +11,7 @@ var scale: float = 4.0
 @export var sounds: AudioStreamPlayer
 
 func _ready() -> void:
+	# I don't think this is entirely necessary but good to have.
 	var _rid = get_tree().get_root().get_viewport_rid()
 	RenderingServer.viewport_set_transparent_background(_rid, true)
 	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_TRANSPARENT,true)
@@ -19,7 +20,6 @@ func _ready() -> void:
 		randi_range(0, DisplayServer.screen_get_size().x),
 		randi_range(0, DisplayServer.screen_get_size().y)
 	)
-	
 func tick(delta: float) -> void:
 	if not menu_open:
 		time += delta
@@ -48,6 +48,7 @@ func tick(delta: float) -> void:
 				menu_open = true
 				kris.sprite.stop()
 				menu.window_manager = self
+				# Godot gets mad about integer division but just doesn't allow using floats here. :(
 				menu.position = Vector2i(kris.get_global_mouse_position()) + DisplayServer.window_get_size() / 2
 				menu.kris = kris
 				add_child(menu)
@@ -57,6 +58,7 @@ func set_window_name(form: int):
 func set_window_size(size: Vector2i):
 	DisplayServer.window_set_size(size)
 func bound_position() -> void:
+	# Former logic that looks cleaner but doesn't account for the launch velocity:
 	#kris.position.x = clamp(kris.position.x, 0.0, float(DisplayServer.screen_get_size().x - DisplayServer.window_get_size().x))
 	#kris.position.y = clamp(kris.position.y, 0.0, float(DisplayServer.screen_get_size().y - DisplayServer.window_get_size().y))
 	if kris.position.x < 0.0:

@@ -13,6 +13,7 @@ var directions = [
 	"right",
 	"left"
 ]
+# TODO: Refactor this to a seconds-based timer, would work the same but doesn't rely on 30 FPS.
 var move_timer = 0
 
 var emote = ""
@@ -129,10 +130,13 @@ func update_visuals() -> void:
 				sprite.play("walk_" + direction)
 			else:
 				sprite.play("idle_" + direction)
+# Set the emote state and calculate the length it should play.
 func rand_emote() -> void:
 	moving = false
 	emote = info.emotes[form].pick_random()
 	if emote:
+		# Very ugly math, wish Godot gave an easier way to get the length of animations.
+		# Should be prettier when I get around to refactoring the move_timer.
 		move_timer = int(
 				(float(sprite.sprite_frames.get_frame_count(emote)) /
 				float(sprite.sprite_frames.get_animation_speed(emote))

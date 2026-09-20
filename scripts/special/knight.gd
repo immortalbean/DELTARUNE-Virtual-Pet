@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 	queue_redraw()
 func _draw() -> void:
 	# Shouldn't break in theory, but still check later on to be safe.
-	# It is pretty ugly though.
+	# It is pretty ugly though. (better than get_parent().get_parent() anyway.)
 	var kris = get_node("../..")
 	var sprite = parent as AnimatedSprite2D
 	# There has to be an easier way to do this right?
