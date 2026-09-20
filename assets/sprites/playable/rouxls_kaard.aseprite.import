@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dytcujdx4eab"
+path="res://.godot/imported/rouxls_kaard.aseprite-b1c4fed15115c5be2f5fdea4500861d7.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/rouxls_kaard.aseprite"
+dest_files=["res://.godot/imported/rouxls_kaard.aseprite-b1c4fed15115c5be2f5fdea4500861d7.res"]
+
+[params]
+
