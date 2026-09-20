@@ -129,5 +129,9 @@
 		"sound": "knight",
 		"emotes": ["droop"],
 		"sprite_flag": "knight_flag"
+	},
+	{
+		"sprite": "res://scenes/sprites/rouxls_kaard.tscn",
+		"name": "Rouxls Kaard"
 	}
 ]
