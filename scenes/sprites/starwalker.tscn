@@ -1,0 +1,167 @@
+[gd_scene format=4 uid="uid://bts4bpvv3tdjw"]
+
+[sub_resource type="PortableCompressedTexture2D" id="PortableCompressedTexture2D_df4bt"]
+_data = PackedByteArray("AAADAAUAAAABAAAAigAAAFwAAACgAgAAUklGRpgCAABXRUJQVlA4TIwCAAAvicAWEB8gEEjy1x1gjfkXEBT5P9r8B+CXgK4Duo0kiQS6oHT37godNfQryjatoLh9vqJzHY+JGvyL8yZyfV+jM42JFvMTKlxEvKAljm59GNH/CaDXUH6+HnVL4fm66pZjp00v415FO+1cBm4khE6zWGhkREdSx3T8UKSxQhzZs+L0+QdDZVrk64FoqBRwa8L+p8NSWX//7PRUhIhoQ+ahM/SMkYgSfjnsDeFiFrHgSACgQjTJ8QwoX2T98Kk8ZKRLA7Cly4TT5x+wbyEHV8j2Px22njuEWvH8Cz0rd1FTqicACI2Mv8C9okepntWia7luae5CtiBOnugJPuJaiaWVXGVBeA4sULOEEvpsjVvWLdjgYOu2aySwcaf5+BzQVSNrgosdTHNtPvcajalpiEmpx9GRgJhVejzziAwZ4EoSNeHaFVqXpZWhhlDLq28WoWq5iLV073POMs4y1mjt9MCJ3raml0TmFye5SvBsnrPMHoueXacE7VSCI6uMraSu6BD59Tg0Mthh2po+++6ApVEQPGBKlfV0c8ZQ2ZAhEm0qCctA08WMvWFP1VlkXYiGyiSffUAjEYkBANeyfiUyTFy5/vDrg0QiotmV8Pv3n8laSTjdnBEuaPWQLdd/mtJlxt4ArmTcOf4FBLFydQag1CEBQKi8lwFsawlPEFzKlU0GlGtkD9lSPWNVagVrkS0IXcr/EB2xxFZZwI2kz8W/jhyzZ2+tSbNPHcFx5dPU5zh6kiZwjx09ByMldYAttLiEBlHS2bUfK6NxeTJ4jg0yLtDK0bjcBc9tQywUgC+eGZdbD3a1BIRJpHIFLvfsWIIjUjOvXK7J8R/XSGRspXu+ip6Fuq5cBgcNfSaa6PUT")
+size_override = Vector2(138, 92)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r8w0"]
+atlas = SubResource("PortableCompressedTexture2D_df4bt")
+region = Rect2(92, 46, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lucd1"]
+atlas = SubResource("PortableCompressedTexture2D_df4bt")
+region = Rect2(0, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw7o6"]
+atlas = SubResource("PortableCompressedTexture2D_df4bt")
+region = Rect2(46, 46, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbtbv"]
+atlas = SubResource("PortableCompressedTexture2D_df4bt")
+region = Rect2(46, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hsoi"]
+atlas = SubResource("PortableCompressedTexture2D_df4bt")
+region = Rect2(92, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kw35r"]
+atlas = SubResource("PortableCompressedTexture2D_df4bt")
+region = Rect2(0, 46, 46, 46)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rrphb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r8w0")
+}],
+"loop": 1,
+"name": &"drag",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lucd1")
+}],
+"loop": 1,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xw7o6")
+}],
+"loop": 1,
+"name": &"idle_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lucd1")
+}],
+"loop": 1,
+"name": &"idle_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xw7o6")
+}],
+"loop": 1,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbtbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hsoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbtbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kw35r")
+}],
+"loop": 1,
+"name": &"walk_down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbtbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hsoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbtbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kw35r")
+}],
+"loop": 1,
+"name": &"walk_left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbtbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hsoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbtbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kw35r")
+}],
+"loop": 1,
+"name": &"walk_right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbtbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hsoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbtbv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kw35r")
+}],
+"loop": 1,
+"name": &"walk_up",
+"speed": 5.0
+}]
+
+[node name="sprite" type="AnimatedSprite2D" unique_id=300494957]
+texture_filter = 1
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_rrphb")
+animation = &"idle_down"
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": false,
+"layer_section": false,
+"output_section": false,
+"pending_changes": {},
+"slice_section": false
+}
+metadata/_aseprite_wizard_config_ = {
+"embed_tex": true,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"scale": "1.0",
+"should_round_fps": true,
+"slice": "",
+"source": "res://assets/sprites/playable/starwalker.aseprite",
+"source_uid": 537118001849631359
+}
+metadata/_aseprite_wizard_source_file_hash_ = "90d1170447c40356f3c2962fde51f8ad"

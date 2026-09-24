@@ -141,5 +141,9 @@
 		"sound": "spamton",
 		"sprite_flag": "sneo_flag",
 		"default_scale": 3
+	},
+	{
+		"sprite": "res://scenes/sprites/starwalker.tscn",
+		"name": "The    Original     Starwalker"
 	}
 ]

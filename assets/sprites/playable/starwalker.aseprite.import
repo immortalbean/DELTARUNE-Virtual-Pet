@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://hwgiw2f1xc68"
+path="res://.godot/imported/starwalker.aseprite-d301d9b8bd6855a871c2f486badf11ad.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/starwalker.aseprite"
+dest_files=["res://.godot/imported/starwalker.aseprite-d301d9b8bd6855a871c2f486badf11ad.res"]
+
+[params]
+
