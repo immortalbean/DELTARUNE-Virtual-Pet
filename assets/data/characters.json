@@ -92,7 +92,8 @@
 	},
 	{
 		"sprite": "res://scenes/sprites/seth.tscn",
-		"name": "Seth"
+		"name": "Seth",
+		"emotes": ["aura"]
 	},
 	{
 		"sprite": "res://scenes/sprites/orange.tscn",
@@ -104,7 +105,8 @@
 	},
 	{
 		"sprite": "res://scenes/sprites/yellow.tscn",
-		"name": "Yellow"
+		"name": "Yellow",
+		"emotes": ["shoot"]
 	},
 	{
 		"sprite": "res://scenes/sprites/blue.tscn",

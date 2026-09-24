@@ -138,9 +138,8 @@ func rand_emote() -> void:
 	if emote:
 		# Very ugly math, wish Godot gave an easier way to get the length of animations.
 		# Should be prettier when I get around to refactoring the move_timer.
-		move_timer = int(
-				(float(sprite.sprite_frames.get_frame_count(emote)) /
-				float(sprite.sprite_frames.get_animation_speed(emote))
-				) * 30.0
-		)
+		var emote_seconds = 0.0
+		for i in range(sprite.sprite_frames.get_frame_count(emote)):
+			emote_seconds += sprite.sprite_frames.get_frame_duration(emote, i) / sprite.sprite_frames.get_animation_speed(emote)
+		move_timer = int(emote_seconds * 30.0)
 		move_timer = max(move_timer, 40)
