@@ -1,0 +1,280 @@
+[gd_scene format=3 uid="uid://bphtc1bx2k6kq"]
+
+[ext_resource type="Script" uid="uid://c23pqnf0b31nd" path="res://scripts/special/sneo.gd" id="1_blfui"]
+[ext_resource type="Script" uid="uid://d0dsimsu8nsn1" path="res://scripts/utility/transform_effect_manager.gd" id="1_cdyoy"]
+[ext_resource type="Texture2D" uid="uid://g2vx75c2vw02" path="res://assets/sprites/playable/spamton_neo/wing1.png" id="1_dhgpb"]
+[ext_resource type="Script" uid="uid://cx3m4d5o6hoba" path="res://scripts/utility/ns_transform_effect.gd" id="2_pdimn"]
+[ext_resource type="Texture2D" uid="uid://2nfmsuqr3vi0" path="res://assets/sprites/playable/spamton_neo/arm1.png" id="2_x4hm4"]
+[ext_resource type="Texture2D" uid="uid://gplycq6ackaj" path="res://assets/sprites/playable/spamton_neo/leg1.png" id="3_cdyoy"]
+[ext_resource type="Texture2D" uid="uid://jxnarpv0nhve" path="res://assets/sprites/playable/spamton_neo/strings.png" id="3_uvtx4"]
+[ext_resource type="Texture2D" uid="uid://cxlr0kqgjqcwf" path="res://assets/sprites/playable/spamton_neo/leg2.png" id="4_pdimn"]
+[ext_resource type="Texture2D" uid="uid://dtsilixmm4lob" path="res://assets/sprites/playable/spamton_neo/body.png" id="5_uvtx4"]
+[ext_resource type="Texture2D" uid="uid://drmjc45s43314" path="res://assets/sprites/playable/spamton_neo/arm2.png" id="6_iknx2"]
+[ext_resource type="Texture2D" uid="uid://ci6a51j8mrifq" path="res://assets/sprites/playable/spamton_neo/wing2.png" id="7_3x4e4"]
+[ext_resource type="Texture2D" uid="uid://dswj1yplu16na" path="res://assets/sprites/playable/spamton_neo/head.png" id="8_s7vmn"]
+[ext_resource type="Script" uid="uid://obwaxwchi1ey" path="res://scripts/utility/sprite_play_on_load.gd" id="11_6snj1"]
+
+[sub_resource type="Curve" id="Curve_3x4e4"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_s7vmn"]
+script = ExtResource("2_pdimn")
+loop_mode = 1
+time_speed = 0.4
+value_multiplier = 4.0
+effect_curve = SubResource("Curve_3x4e4")
+metadata/_custom_type_script = "uid://cx3m4d5o6hoba"
+
+[sub_resource type="Curve" id="Curve_dwjet"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_o8v8s"]
+script = ExtResource("2_pdimn")
+loop_mode = 1
+time_offset = 0.4
+time_speed = 0.8
+value_multiplier = 2.0
+effect_curve = SubResource("Curve_dwjet")
+metadata/_custom_type_script = "uid://cx3m4d5o6hoba"
+
+[sub_resource type="Curve" id="Curve_o8v8s"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_3ejiw"]
+script = ExtResource("2_pdimn")
+loop_mode = 1
+time_speed = 0.2
+effect_curve = SubResource("Curve_o8v8s")
+metadata/_custom_type_script = "uid://cx3m4d5o6hoba"
+
+[sub_resource type="Curve" id="Curve_pdimn"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_uvtx4"]
+script = ExtResource("2_pdimn")
+loop_mode = 1
+time_offset = 0.7
+time_speed = 0.4
+value_multiplier = 12.0
+effect_curve = SubResource("Curve_pdimn")
+metadata/_custom_type_script = "uid://cx3m4d5o6hoba"
+
+[sub_resource type="Curve" id="Curve_uvtx4"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_iknx2"]
+script = ExtResource("2_pdimn")
+loop_mode = 1
+time_speed = 0.4
+value_multiplier = 10.0
+effect_curve = SubResource("Curve_uvtx4")
+metadata/_custom_type_script = "uid://cx3m4d5o6hoba"
+
+[sub_resource type="Curve" id="Curve_lrun3"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_dwjet"]
+script = ExtResource("2_pdimn")
+loop_mode = 1
+time_speed = 0.71
+value_multiplier = 15.0
+effect_curve = SubResource("Curve_lrun3")
+metadata/_custom_type_script = "uid://cx3m4d5o6hoba"
+
+[sub_resource type="Curve" id="Curve_iknx2"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_3x4e4"]
+script = ExtResource("2_pdimn")
+loop_mode = 1
+time_speed = 0.8
+value_multiplier = 15.0
+effect_curve = SubResource("Curve_iknx2")
+metadata/_custom_type_script = "uid://cx3m4d5o6hoba"
+
+[sub_resource type="Curve" id="Curve_s7vmn"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_p5au0"]
+script = ExtResource("2_pdimn")
+loop_mode = 1
+time_speed = 0.73
+value_multiplier = 15.0
+effect_curve = SubResource("Curve_s7vmn")
+metadata/_custom_type_script = "uid://cx3m4d5o6hoba"
+
+[sub_resource type="Curve" id="Curve_p5au0"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_lrun3"]
+script = ExtResource("2_pdimn")
+loop_mode = 1
+time_speed = 0.76
+value_multiplier = 15.0
+effect_curve = SubResource("Curve_p5au0")
+metadata/_custom_type_script = "uid://cx3m4d5o6hoba"
+
+[sub_resource type="Curve" id="Curve_3ejiw"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_aeaa8"]
+script = ExtResource("2_pdimn")
+loop_mode = 1
+time_offset = 0.8
+time_speed = 0.4
+value_multiplier = -12.0
+effect_curve = SubResource("Curve_3ejiw")
+metadata/_custom_type_script = "uid://cx3m4d5o6hoba"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5au0"]
+atlas = ExtResource("8_s7vmn")
+region = Rect2(0, 0, 36, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrun3"]
+atlas = ExtResource("8_s7vmn")
+region = Rect2(36, 0, 36, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dwjet"]
+atlas = ExtResource("8_s7vmn")
+region = Rect2(0, 33, 36, 33)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o8v8s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5au0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrun3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dwjet")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="Curve" id="Curve_cdyoy"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, -1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_cdyoy"]
+script = ExtResource("2_pdimn")
+loop_mode = 1
+time_offset = 0.5
+time_speed = 0.4
+value_multiplier = 10.0
+effect_curve = SubResource("Curve_cdyoy")
+metadata/_custom_type_script = "uid://cx3m4d5o6hoba"
+
+[node name="sneo" type="CanvasGroup" unique_id=1308519411]
+script = ExtResource("1_blfui")
+
+[node name="parent" type="Node2D" parent="." unique_id=14911388]
+position = Vector2(-11, 4)
+script = ExtResource("1_cdyoy")
+position_x_effect = SubResource("Resource_s7vmn")
+position_y_effect = SubResource("Resource_o8v8s")
+
+[node name="Strings" type="Sprite2D" parent="parent" unique_id=88834926]
+position = Vector2(3, -30.749998)
+scale = Vector2(1, 1.4531251)
+texture = ExtResource("3_uvtx4")
+script = ExtResource("1_cdyoy")
+rotation_effect = SubResource("Resource_3ejiw")
+
+[node name="joint4" type="Node2D" parent="parent" unique_id=1279968088]
+position = Vector2(1, -6)
+script = ExtResource("1_cdyoy")
+rotation_effect = SubResource("Resource_uvtx4")
+
+[node name="joint0" type="Node2D" parent="parent/joint4" unique_id=1646323664]
+position = Vector2(-6, -7)
+script = ExtResource("1_cdyoy")
+rotation_effect = SubResource("Resource_iknx2")
+
+[node name="Wing1" type="Sprite2D" parent="parent/joint4/joint0" unique_id=1527276475]
+position = Vector2(-7, 0)
+texture = ExtResource("1_dhgpb")
+
+[node name="joint1" type="Node2D" parent="parent/joint4" unique_id=2132667837]
+position = Vector2(-7, 0)
+script = ExtResource("1_cdyoy")
+rotation_effect = SubResource("Resource_dwjet")
+
+[node name="Arm1" type="Sprite2D" parent="parent/joint4/joint1" unique_id=1933896718]
+position = Vector2(-2, 12)
+texture = ExtResource("2_x4hm4")
+
+[node name="joint2" type="Node2D" parent="parent/joint4" unique_id=1863255811]
+position = Vector2(-4, 16)
+script = ExtResource("1_cdyoy")
+rotation_effect = SubResource("Resource_3x4e4")
+
+[node name="Leg1" type="Sprite2D" parent="parent/joint4/joint2" unique_id=1571039085]
+position = Vector2(-1, 14)
+texture = ExtResource("3_cdyoy")
+
+[node name="joint3" type="Node2D" parent="parent/joint4" unique_id=2076056653]
+position = Vector2(3, 16)
+script = ExtResource("1_cdyoy")
+rotation_effect = SubResource("Resource_p5au0")
+
+[node name="Leg2" type="Sprite2D" parent="parent/joint4/joint3" unique_id=831316413]
+position = Vector2(1, 14)
+texture = ExtResource("4_pdimn")
+
+[node name="Body" type="Sprite2D" parent="parent/joint4" unique_id=1324801672]
+position = Vector2(-1, 8)
+texture = ExtResource("5_uvtx4")
+
+[node name="joint5" type="Node2D" parent="parent/joint4" unique_id=454549920]
+position = Vector2(10, -3)
+script = ExtResource("1_cdyoy")
+rotation_effect = SubResource("Resource_lrun3")
+
+[node name="Arm2" type="Sprite2D" parent="parent/joint4/joint5" unique_id=563709808]
+position = Vector2(1, 14)
+texture = ExtResource("6_iknx2")
+
+[node name="joint6" type="Node2D" parent="parent/joint4" unique_id=1648895232]
+position = Vector2(3, -12)
+script = ExtResource("1_cdyoy")
+rotation_effect = SubResource("Resource_aeaa8")
+
+[node name="Head" type="AnimatedSprite2D" parent="parent/joint4/joint6" unique_id=2056998459]
+position = Vector2(2, -7)
+sprite_frames = SubResource("SpriteFrames_o8v8s")
+frame_progress = 0.22896773
+script = ExtResource("11_6snj1")
+
+[node name="joint7" type="Node2D" parent="parent/joint4" unique_id=1335422298]
+position = Vector2(8, -9)
+script = ExtResource("1_cdyoy")
+rotation_effect = SubResource("Resource_cdyoy")
+
+[node name="Wing2" type="Sprite2D" parent="parent/joint4/joint7" unique_id=1803076207]
+position = Vector2(19, 0)
+texture = ExtResource("7_3x4e4")

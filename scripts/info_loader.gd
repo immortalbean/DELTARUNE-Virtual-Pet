@@ -5,6 +5,7 @@ var scenes = []
 var sounds = []
 var emotes = []
 var sprite_flags = []
+var default_scales = []
 
 # Use _enter_tree so that this data is loaded before any other nodes try reading it.
 func _enter_tree() -> void:
@@ -17,6 +18,7 @@ func _enter_tree() -> void:
 		var sound_temp = "default"
 		var emote_temp = []
 		var flags_temp = "" # Should be good as just a string for now, but can be turned into an array later if needed.
+		var default_scale_temp = 4
 		if "inherits" in i:
 			var inherit = i["inherits"]
 			# Switch to pre-existing lists from json data to allow layered inheritance.
@@ -25,6 +27,7 @@ func _enter_tree() -> void:
 			sound_temp = sounds[inherit]
 			emote_temp = emotes[inherit]
 			flags_temp = sprite_flags[inherit]
+			default_scale_temp = default_scales[inherit]
 		if "name" in i:
 			name_temp = i["name"]
 		if "sprite" in i:
@@ -35,11 +38,14 @@ func _enter_tree() -> void:
 			emote_temp = i["emotes"]
 		if "sprite_flag" in i:
 			flags_temp = i["sprite_flag"]
+		if "default_scale" in i:
+			default_scale_temp = i["default_scale"]
 		names.append(name_temp)
 		scenes.append(scene_temp)
 		sounds.append(sound_temp)
 		emotes.append(emote_temp)
 		sprite_flags.append(flags_temp)
+		default_scales.append(default_scale_temp)
 	# Concatenate sound file path after all inheritance is set up.
 	for i in len(sounds):
 		sounds[i] = "res://assets/sounds/" + sounds[i] + ".wav"

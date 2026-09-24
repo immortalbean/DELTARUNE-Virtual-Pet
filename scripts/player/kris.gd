@@ -107,6 +107,7 @@ func handle_random_movement():
 func change_form(amount: int):
 	form += amount
 	form = clampi(form, 0, max_form)
+	window_manager.scale = info.default_scales[form]
 	sprite_spawner.spawn()
 	update_visuals()
 	sounds.stream = load(info.sounds[form])

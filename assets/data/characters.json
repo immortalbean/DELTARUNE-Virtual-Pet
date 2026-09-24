@@ -78,7 +78,8 @@
 		"sprite": "res://scenes/sprites/tenna.tscn",
 		"name": "Tenna",
 		"sound": "tenna",
-		"emotes": ["dance"]
+		"emotes": ["dance"],
+		"default_scale": 3
 	},
 	{
 		"sprite": "res://scenes/sprites/napstablook_headphones.tscn",
@@ -133,5 +134,12 @@
 	{
 		"sprite": "res://scenes/sprites/rouxls_kaard.tscn",
 		"name": "Rouxls Kaard"
+	},
+	{
+		"sprite": "res://scenes/sprites/spamton_neo.tscn",
+		"name": "Spamton Neo",
+		"sound": "spamton",
+		"sprite_flag": "sneo_flag",
+		"default_scale": 3
 	}
 ]
