@@ -87,7 +87,8 @@
 	},
 	{
 		"sprite": "res://scenes/sprites/aqua.tscn",
-		"name": "Aqua"
+		"name": "Aqua",
+		"emotes": ["spin", "wave", "sleeve_wave"]
 	},
 	{
 		"sprite": "res://scenes/sprites/seth.tscn",
