@@ -39,6 +39,7 @@
         - "sound" (String) - The .wav sound effect of the pet when grabbed relative to the SFX folder (see below).
         - "emotes" (Array[String]) - An array of `StringName`s that refer to character animations.
 		- "sprite_flag" (String) - The .tscn scene of a visual property you can add to a character. Currently, there's only `"knight_flag"`.
+		- "default_scale" (int) - The scale of the character when spawned. Deafults to 4.
 		- "inherits" - (int) special property, copies the data from an earlier character IDX. You can see an example on line 9 of the file.
 - `res://assets/sprites/playable/`
 	- Where all the .aseprite files for the characters are stored.
