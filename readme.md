@@ -1,6 +1,6 @@
 # DELTARUNE Desktop Pet
 ## Features:
-- 28 characters built in!
+- 30 characters built in!
 - Drag characters around.
 - Right click characters to open the menu.
 - Throw characters around (Don't be too mean).
