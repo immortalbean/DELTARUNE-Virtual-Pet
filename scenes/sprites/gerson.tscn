@@ -18,31 +18,31 @@ region = Rect2(0, 40, 37, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_312h2"]
 atlas = SubResource("PortableCompressedTexture2D_r4k34")
-region = Rect2(37, 0, 37, 40)
+region = Rect2(0, 80, 37, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pahy2"]
 atlas = SubResource("PortableCompressedTexture2D_r4k34")
-region = Rect2(74, 0, 37, 40)
+region = Rect2(37, 0, 37, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_scxl5"]
 atlas = SubResource("PortableCompressedTexture2D_r4k34")
-region = Rect2(111, 0, 37, 40)
+region = Rect2(74, 0, 37, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jmsr0"]
 atlas = SubResource("PortableCompressedTexture2D_r4k34")
-region = Rect2(37, 40, 37, 40)
+region = Rect2(111, 0, 37, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_csrga"]
 atlas = SubResource("PortableCompressedTexture2D_r4k34")
-region = Rect2(74, 40, 37, 40)
+region = Rect2(37, 40, 37, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gmmy2"]
 atlas = SubResource("PortableCompressedTexture2D_r4k34")
-region = Rect2(111, 40, 37, 40)
+region = Rect2(74, 40, 37, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wqqs6"]
 atlas = SubResource("PortableCompressedTexture2D_r4k34")
-region = Rect2(0, 80, 37, 40)
+region = Rect2(111, 40, 37, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vfu1s"]
 atlas = SubResource("PortableCompressedTexture2D_r4k34")
@@ -92,16 +92,24 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mxjug")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_312h2")
+}],
+"loop": 1,
+"name": &"idle_up",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mxjug")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_pahy2")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_scxl5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmsr0")
 }],
 "loop": 1,
 "name": &"walk_down",
@@ -112,13 +120,13 @@ animations = [{
 "texture": SubResource("AtlasTexture_mxjug")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_312h2")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_pahy2")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_scxl5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmsr0")
 }],
 "loop": 1,
 "name": &"walk_left",
@@ -129,13 +137,13 @@ animations = [{
 "texture": SubResource("AtlasTexture_a032q")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jmsr0")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_csrga")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gmmy2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqqs6")
 }],
 "loop": 1,
 "name": &"walk_right",
@@ -143,7 +151,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wqqs6")
+"texture": SubResource("AtlasTexture_312h2")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vfu1s")
@@ -153,9 +161,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_j54yp")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wqqs6")
 }],
 "loop": 1,
 "name": &"walk_up",
@@ -187,4 +192,4 @@ metadata/_aseprite_wizard_config_ = {
 "source": "res://assets/sprites/playable/gerson.aseprite",
 "source_uid": 4224696032627354710
 }
-metadata/_aseprite_wizard_source_file_hash_ = "5253c062a0ece6c381d1d48707e3c228"
+metadata/_aseprite_wizard_source_file_hash_ = "96acbb50bd8a7967c032d2994b4f8e86"
