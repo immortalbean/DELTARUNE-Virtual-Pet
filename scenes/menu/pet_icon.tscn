@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://lnqlegc4a5ki"]
+
+[ext_resource type="Theme" uid="uid://da8ntgqda0yrs" path="res://assets/resources/menu_theme.tres" id="1_y1572"]
+[ext_resource type="Script" uid="uid://dwjsm0cn8opmn" path="res://scripts/pet_icon.gd" id="2_alk1o"]
+[ext_resource type="Texture2D" uid="uid://dtcxq8wldxeyd" path="res://assets/sprites/ui/trash.png" id="2_argxt"]
+[ext_resource type="Texture2D" uid="uid://kgbfoqwojkew" path="res://icon.png" id="3_sjlfg"]
+
+[node name="pet" type="Control" unique_id=1983817671]
+custom_minimum_size = Vector2(100, 128)
+layout_mode = 3
+anchor_right = 0.16700001
+anchor_bottom = 0.26700002
+offset_right = 5.6449966
+offset_bottom = 7.849991
+theme = ExtResource("1_y1572")
+script = ExtResource("2_alk1o")
+
+[node name="Margins" type="MarginContainer" parent="." unique_id=1622007647]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Panel" type="Panel" parent="Margins" unique_id=626878377]
+layout_mode = 2
+
+[node name="IconTexture" type="TextureRect" parent="Margins/Panel" unique_id=277421390]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 91.0
+offset_bottom = 94.0
+texture = ExtResource("3_sjlfg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Remove" type="Button" parent="Margins" unique_id=559592266]
+layout_mode = 2
+size_flags_vertical = 8
+mouse_default_cursor_shape = 2
+text = "Remove"
+icon = ExtResource("2_argxt")
+
+[connection signal="pressed" from="Margins/Remove" to="." method="remove_pressed"]

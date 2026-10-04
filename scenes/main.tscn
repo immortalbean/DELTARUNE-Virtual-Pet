@@ -1,36 +1,19 @@
 [gd_scene format=3 uid="uid://dbh6o1lxgpcmp"]
 
 [ext_resource type="Script" uid="uid://qbrnfmb7ecng" path="res://scripts/main.gd" id="1_0wfyh"]
-[ext_resource type="Theme" uid="uid://da8ntgqda0yrs" path="res://assets/resources/menu_theme.tres" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://d0r8nh4b2i53c" path="res://scenes/menu/main_menu.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://cgnjfom71ahf5" path="res://scenes/pet.tscn" id="2_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://lnqlegc4a5ki" path="res://scenes/menu/pet_icon.tscn" id="3_tbgi4"]
 
-[node name="Main" type="Node" unique_id=28678225]
+[node name="Main" type="Node" unique_id=28678225 node_paths=PackedStringArray("pets_list")]
 script = ExtResource("1_0wfyh")
+pet_scene = ExtResource("2_jyhfs")
+pet_icon_scene = ExtResource("3_tbgi4")
+pets_list = NodePath("Menu/Tabs/Pets/Pets")
 
-[node name="Menu" type="Control" parent="." unique_id=1426421866]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("2_0wfyh")
+[node name="Menu" parent="." unique_id=796358701 instance=ExtResource("2_0wfyh")]
 
-[node name="Tabs" type="TabContainer" parent="Menu" unique_id=1678900680]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-current_tab = 0
+[connection signal="pressed" from="Menu/Tabs/Pets/Pets/add/Margins/Add" to="." method="add_pet"]
 
-[node name="Pets" type="FlowContainer" parent="Menu/Tabs" unique_id=1115341202]
-layout_mode = 2
-metadata/_tab_index = 0
-
-[node name="Settings" type="VBoxContainer" parent="Menu/Tabs" unique_id=1540333669]
-visible = false
-layout_mode = 2
-metadata/_tab_index = 1
+[editable path="Menu"]
+[editable path="Menu/Tabs/Pets/Pets/add"]

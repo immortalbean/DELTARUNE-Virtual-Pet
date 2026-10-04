@@ -24,7 +24,7 @@ config/icon="uid://kgbfoqwojkew"
 
 [display]
 
-window/size/viewport_width=540
+window/size/viewport_width=502
 window/size/viewport_height=450
 window/subwindows/embed_subwindows=false
 window/stretch/aspect="ignore"

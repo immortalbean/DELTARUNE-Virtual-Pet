@@ -5,6 +5,7 @@ const run_addon_1: float = 240.0
 
 var max_form: int
 
+var id = 0
 var moving = false
 var ai_mode = true
 var directions = [

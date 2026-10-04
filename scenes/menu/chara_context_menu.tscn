@@ -8,7 +8,6 @@ transparent_bg = true
 oversampling_override = 1.0
 size = Vector2i(146, 178)
 wrap_controls = true
-exclusive = true
 unresizable = true
 borderless = true
 always_on_top = true

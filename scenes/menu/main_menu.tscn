@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://d0r8nh4b2i53c"]
+
+[ext_resource type="Theme" uid="uid://da8ntgqda0yrs" path="res://assets/resources/menu_theme.tres" id="1_nl8w3"]
+[ext_resource type="PackedScene" uid="uid://x224ufd4kt6h" path="res://scenes/menu/add_pet.tscn" id="2_247la"]
+
+[node name="Menu" type="Control" unique_id=796358701]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("1_nl8w3")
+
+[node name="Tabs" type="TabContainer" parent="." unique_id=1643259006]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 0
+
+[node name="Pets" type="ScrollContainer" parent="Tabs" unique_id=117572143]
+layout_mode = 2
+metadata/_tab_index = 0
+
+[node name="Pets" type="FlowContainer" parent="Tabs/Pets" unique_id=655301542]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+last_wrap_alignment = 1
+
+[node name="add" parent="Tabs/Pets/Pets" unique_id=1983817671 instance=ExtResource("2_247la")]
+layout_mode = 2
+
+[node name="Settings" type="VBoxContainer" parent="Tabs" unique_id=1687938041]
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[editable path="Tabs/Pets/Pets/add"]

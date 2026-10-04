@@ -14,12 +14,12 @@ func prep() -> void:
 	scale_slider.value = window_manager.scale
 	update_ui()
 func delete() -> void:
-	get_tree().quit()
-	queue_free()
-	window_manager.menu_open = false
+	window_manager.main.remove_pet(kris.id)
+	exit()
 func exit() -> void:
-	queue_free()
 	window_manager.menu_open = false
+	window_manager.main.menu_open = false
+	queue_free()
 func next() -> void:
 	kris.change_form(1)
 	update_ui()
@@ -28,8 +28,7 @@ func previous() -> void:
 	update_ui()
 func emote() -> void:
 	kris.rand_emote()
-	queue_free()
-	window_manager.menu_open = false
+	exit()
 func scale(level: float) -> void:
 	window_manager.scale = level
 	kris.update_visuals()

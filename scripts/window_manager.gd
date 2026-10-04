@@ -42,8 +42,9 @@ func tick(delta: float) -> void:
 			dragging = true
 			main.dragging = true
 			sounds.play()
+			window.grab_focus()
 			Input.set_default_cursor_shape(Input.CursorShape.CURSOR_MOVE)
-		if Input.is_action_just_released("mouse_click"):
+		if !Input.is_action_pressed("mouse_click"):
 			dragging = false
 			main.dragging = false
 			Input.set_default_cursor_shape(Input.CursorShape.CURSOR_ARROW)
@@ -56,12 +57,13 @@ func tick(delta: float) -> void:
 			kris.position = new_position
 		bound_position()
 		window.position = kris.position
-		if Input.is_action_just_pressed("right_click"):
-			if has_node("menu"):
+		if Input.is_action_just_pressed("right_click") and is_window_hovered(window):
+			if main.menu_open:
 				pass
 			else:
 				var menu = context_menu.instantiate()
 				menu_open = true
+				main.menu_open = true
 				kris.sprite.stop()
 				menu.window_manager = self
 				# Godot gets mad about integer division but just doesn't allow using floats here. :(
@@ -69,6 +71,8 @@ func tick(delta: float) -> void:
 				menu.kris = kris
 				add_child(menu)
 				menu.prep()
+				window.grab_focus()
+				menu.grab_focus()
 func set_window_name(form: int):
 	window.title = info.names[form]
 func set_window_size(size: Vector2i):
@@ -80,14 +84,14 @@ func bound_position() -> void:
 	if kris.position.x < 0.0:
 		kris.position.x = 0.0
 		kris.launch_velocity.x *= -1.0
-	var bound_x = float(DisplayServer.screen_get_size().x - DisplayServer.window_get_size().x)
+	var bound_x = float(DisplayServer.screen_get_size().x - window.size.x)
 	if kris.position.x > bound_x:
 		kris.position.x = bound_x
 		kris.launch_velocity.x *= -1.0
 	if kris.position.y < 0.0:
 		kris.position.y = 0.0
 		kris.launch_velocity.y *= -1.0
-	var bound_y = float(DisplayServer.screen_get_size().y - DisplayServer.window_get_size().y)
+	var bound_y = float(DisplayServer.screen_get_size().y - window.size.y)
 	if kris.position.y > bound_y:
 		kris.position.y = bound_y
 		kris.launch_velocity.y *= -1.0

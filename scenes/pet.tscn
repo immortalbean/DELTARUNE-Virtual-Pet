@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://cgnjfom71ahf5"]
 
-[ext_resource type="PackedScene" uid="uid://cnsvbugcwh45j" path="res://scenes/playable/kris.tscn" id="1_oya5r"]
+[ext_resource type="PackedScene" uid="uid://cnsvbugcwh45j" path="res://scenes/playable/kris.tscn" id="1_mdqe4"]
 
-[node name="Window" type="Window" unique_id=1518727649]
+[node name="Pet" type="Window" unique_id=1518727649]
 transparent_bg = true
 oversampling_override = 1.0
 title = "Kris"
@@ -15,8 +15,7 @@ transparent = true
 sharp_corners = true
 minimize_disabled = true
 maximize_disabled = true
-force_native = true
 
-[node name="kris" parent="." unique_id=551256782 instance=ExtResource("1_oya5r")]
+[node name="kris" parent="." unique_id=551256782 instance=ExtResource("1_mdqe4")]
 
 [editable path="kris"]
