@@ -3,6 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://qa22bqgg4ya7" path="res://assets/sprites/ui/grabber.png" id="1_hengn"]
 [ext_resource type="FontFile" uid="uid://cr6io85yjaj4l" path="res://assets/fonts/font.otf" id="1_nqp7p"]
 [ext_resource type="Texture2D" uid="uid://d3td5lycrh4k" path="res://assets/sprites/ui/tick.png" id="2_srknj"]
+[ext_resource type="Texture2D" uid="uid://b3lj0ptmxbg2t" path="res://assets/sprites/ui/decrement.png" id="3_3cw1y"]
+[ext_resource type="Texture2D" uid="uid://nb8vxw3og1vg" path="res://assets/sprites/ui/increment.png" id="4_3v6km"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nqp7p"]
 bg_color = Color(0, 0, 0, 1)
@@ -47,6 +49,45 @@ border_color = Color(1, 0.49803922, 0.15294118, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_227t4"]
 bg_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nemqb"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(1, 0.49, 0.14999998, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ivsiu"]
+content_margin_left = 6.0
+content_margin_right = 6.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_color = Color(0.42352942, 0.1882353, 0, 1)
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_63j1a"]
+content_margin_left = 6.0
+content_margin_right = 6.0
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_color = Color(1, 0.49, 0.14999998, 1)
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ylai1"]
+content_margin_left = 6.0
+content_margin_right = 6.0
+bg_color = Color(0, 0, 0, 1)
+border_color = Color(1, 0.49, 0.14999998, 1)
+expand_margin_left = 6.0
+expand_margin_right = 6.0
+
 [resource]
 default_font = ExtResource("1_nqp7p")
 default_font_size = 12
@@ -65,3 +106,18 @@ HSlider/styles/slider = SubResource("StyleBoxFlat_3v6km")
 Label/colors/font_color = Color(1, 0.49803922, 0.15294118, 1)
 Panel/styles/panel = SubResource("StyleBoxFlat_srknj")
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_227t4")
+TabContainer/colors/drop_mark_color = Color(1, 0.49803922, 0.15294118, 1)
+TabContainer/colors/font_disabled_color = Color(0.5764706, 0.25490198, 0, 1)
+TabContainer/colors/font_hovered_color = Color(0.9843137, 0.49019608, 0.14901961, 1)
+TabContainer/colors/font_selected_color = Color(1, 0.49803922, 0.15294118, 1)
+TabContainer/colors/font_unselected_color = Color(0.5372549, 0.23921569, 0, 1)
+TabContainer/constants/side_margin = 6
+TabContainer/constants/tab_separation = 13
+TabContainer/icons/decrement = ExtResource("3_3cw1y")
+TabContainer/icons/decrement_highlight = ExtResource("3_3cw1y")
+TabContainer/icons/increment = ExtResource("4_3v6km")
+TabContainer/icons/increment_highlight = ExtResource("4_3v6km")
+TabContainer/styles/panel = SubResource("StyleBoxFlat_nemqb")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxFlat_ivsiu")
+TabContainer/styles/tab_selected = SubResource("StyleBoxFlat_63j1a")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxFlat_ylai1")
