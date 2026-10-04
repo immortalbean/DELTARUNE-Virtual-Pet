@@ -1,5 +1,6 @@
 extends Node
 
+var window: Window
 var mouse_offset: Vector2 = Vector2.ZERO
 var dragging = false
 var kris: CharacterBody2D
@@ -12,9 +13,11 @@ var scale: float = 4.0
 
 func _ready() -> void:
 	# I don't think this is entirely necessary but good to have.
-	var _rid = get_tree().get_root().get_viewport_rid()
+	window = get_window()
+	var _rid = window.get_viewport_rid()
 	RenderingServer.viewport_set_transparent_background(_rid, true)
-	DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_TRANSPARENT,true)
+	#DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_TRANSPARENT,true)
+	window.set_flag(Window.Flags.FLAG_TRANSPARENT,true)
 	kris = get_parent()
 	kris.position = Vector2(
 		randi_range(0, DisplayServer.screen_get_size().x),
@@ -39,7 +42,7 @@ func tick(delta: float) -> void:
 			kris.launch_velocity = (new_position - kris.position) * 30.0
 			kris.position = new_position
 		bound_position()
-		DisplayServer.window_set_position(kris.position)
+		window.position = kris.position
 		if Input.is_action_just_pressed("right_click"):
 			if has_node("menu"):
 				pass
@@ -49,14 +52,14 @@ func tick(delta: float) -> void:
 				kris.sprite.stop()
 				menu.window_manager = self
 				# Godot gets mad about integer division but just doesn't allow using floats here. :(
-				menu.position = Vector2i(kris.get_global_mouse_position()) + DisplayServer.window_get_size() / 2
+				menu.position = Vector2i(kris.get_global_mouse_position()) + window.size / 2
 				menu.kris = kris
 				add_child(menu)
 				menu.prep()
 func set_window_name(form: int):
-	DisplayServer.window_set_title(info.names[form])
+	window.title = info.names[form]
 func set_window_size(size: Vector2i):
-	DisplayServer.window_set_size(size)
+	window.size = size
 func bound_position() -> void:
 	# Former logic that looks cleaner but doesn't account for the launch velocity:
 	#kris.position.x = clamp(kris.position.x, 0.0, float(DisplayServer.screen_get_size().x - DisplayServer.window_get_size().x))
