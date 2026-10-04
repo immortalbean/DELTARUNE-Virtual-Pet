@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dbh6o1lxgpcmp"]
+
+[ext_resource type="Script" uid="uid://qbrnfmb7ecng" path="res://scripts/main.gd" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://cgnjfom71ahf5" path="res://scenes/window.tscn" id="1_o5qli"]
+
+[node name="Main" type="Node" unique_id=28678225]
+script = ExtResource("1_0wfyh")
+
+[node name="Control" type="Control" parent="." unique_id=1426421866]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 624.0
+offset_bottom = 368.0
+
+[node name="Window" parent="." unique_id=1518727649 instance=ExtResource("1_o5qli")]
+force_native = false
+
+[node name="Window2" parent="." unique_id=1597066000 instance=ExtResource("1_o5qli")]
+force_native = false
+
+[node name="Window3" parent="." unique_id=2007521271 instance=ExtResource("1_o5qli")]
+force_native = false
+
+[node name="Window4" parent="." unique_id=675023957 instance=ExtResource("1_o5qli")]
+force_native = false

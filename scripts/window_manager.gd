@@ -1,6 +1,7 @@
 extends Node
 
 var window: Window
+var main: Node
 var mouse_offset: Vector2 = Vector2.ZERO
 var dragging = false
 var kris: CharacterBody2D
@@ -14,6 +15,7 @@ var scale: float = 4.0
 func _ready() -> void:
 	# I don't think this is entirely necessary but good to have.
 	window = get_window()
+	main = window.get_parent()
 	var _rid = window.get_viewport_rid()
 	RenderingServer.viewport_set_transparent_background(_rid, true)
 	#DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_TRANSPARENT,true)
@@ -23,16 +25,27 @@ func _ready() -> void:
 		randi_range(0, DisplayServer.screen_get_size().x),
 		randi_range(0, DisplayServer.screen_get_size().y)
 	)
+func is_window_hovered(win: Window):
+	var hovered = true
+	var pos = win.get_mouse_position()
+	var size = win.size
+	if pos.x < 0 or pos.y < 0:
+		hovered = false
+	if pos.x > size.y or pos.y > size.y:
+		hovered = false
+	return hovered
 func tick(delta: float) -> void:
 	if not menu_open:
 		time += delta
-		if Input.is_action_just_pressed("mouse_click"):
+		if Input.is_action_just_pressed("mouse_click") and is_window_hovered(window) and not main.dragging:
 			mouse_offset = kris.position - kris.get_global_mouse_position()
 			dragging = true
+			main.dragging = true
 			sounds.play()
 			Input.set_default_cursor_shape(Input.CursorShape.CURSOR_MOVE)
 		if Input.is_action_just_released("mouse_click"):
 			dragging = false
+			main.dragging = false
 			Input.set_default_cursor_shape(Input.CursorShape.CURSOR_ARROW)
 		if dragging:
 			var rounded_time = time * 180.0
