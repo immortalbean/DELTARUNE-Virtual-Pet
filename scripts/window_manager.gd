@@ -12,12 +12,11 @@ var scale: float = 4.0
 @export var sounds: AudioStreamPlayer
 
 func _ready() -> void:
-	# I don't think this is entirely necessary but good to have.
 	window = get_window()
 	main = window.get_parent()
 	var _rid = window.get_viewport_rid()
+	# I don't think this is entirely necessary but good to have.
 	RenderingServer.viewport_set_transparent_background(_rid, true)
-	#DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_TRANSPARENT,true)
 	window.set_flag(Window.Flags.FLAG_TRANSPARENT,true)
 	kris = get_parent()
 	kris.position = Vector2(
@@ -52,7 +51,7 @@ func tick(delta: float) -> void:
 			var new_position = kris.get_global_mouse_position() + mouse_offset + (
 				Vector2(snapped(sin(deg_to_rad(rounded_time)) * 3.0, 1.0), snapped(sin(deg_to_rad(rounded_time * 0.9)) * 3.0, 1.0))
 				)
-			kris.launch_velocity = (new_position - kris.position) * 30.0
+			kris.launch_velocity = (new_position - kris.position) * 30.0 * main.throw_power
 			kris.position = new_position
 		bound_position()
 		window.position = kris.position

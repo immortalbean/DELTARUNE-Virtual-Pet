@@ -8,6 +8,7 @@ var pet_icons := {}
 var dragging := false
 var menu_open := false
 var next_id := 0
+var throw_power = 1.0
 
 func add_pet() -> void:
 	var new_pet = pet_scene.instantiate()
@@ -28,3 +29,8 @@ func remove_pet(id: int):
 func _physics_process(delta: float) -> void:
 	if !Input.is_action_pressed("mouse_click"):
 		dragging = false
+
+func set_volume(value: float) -> void:
+	AudioServer.set_bus_volume_linear(0, value)
+func set_throw_power(value: float) -> void:
+	throw_power = value

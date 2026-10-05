@@ -38,9 +38,40 @@ last_wrap_alignment = 1
 [node name="add" parent="Tabs/Pets/Pets" unique_id=1983817671 instance=ExtResource("2_247la")]
 layout_mode = 2
 
-[node name="Settings" type="VBoxContainer" parent="Tabs" unique_id=1687938041]
+[node name="Settings" type="MarginContainer" parent="Tabs" unique_id=1667853505]
 visible = false
 layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
 metadata/_tab_index = 1
+
+[node name="SettingsScroll" type="ScrollContainer" parent="Tabs/Settings" unique_id=1608146970]
+layout_mode = 2
+
+[node name="SettingsList" type="VBoxContainer" parent="Tabs/Settings/SettingsScroll" unique_id=172588144]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VolumeLabel" type="Label" parent="Tabs/Settings/SettingsScroll/SettingsList" unique_id=1973372679]
+layout_mode = 2
+text = "Volume:"
+
+[node name="VolumeSlider" type="HSlider" parent="Tabs/Settings/SettingsScroll/SettingsList" unique_id=2050843113]
+layout_mode = 2
+max_value = 1.0
+value = 1.0
+
+[node name="ThrowPowerLabel" type="Label" parent="Tabs/Settings/SettingsScroll/SettingsList" unique_id=380298085]
+layout_mode = 2
+text = "Throw power:"
+
+[node name="SetThrowPower" type="HSlider" parent="Tabs/Settings/SettingsScroll/SettingsList" unique_id=1931649106]
+layout_mode = 2
+max_value = 1.0
+step = 0.0
+value = 1.0
 
 [editable path="Tabs/Pets/Pets/add"]
