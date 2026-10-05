@@ -59,6 +59,11 @@
 		"emotes": ["pose"]
 	},
 	{
+		"sprite": "res://scenes/sprites/lancer.tscn",
+		"name": "Lancer",
+		"sound": "lancer"
+	},
+	{
 		"sprite": "res://scenes/sprites/jevil.tscn",
 		"name": "Jevil",
 		"sound": "jevil"
@@ -101,7 +106,8 @@
 	},
 	{
 		"sprite": "res://scenes/sprites/green.tscn",
-		"name": "Green"
+		"name": "Green",
+		"emotes": ["shrug"]
 	},
 	{
 		"sprite": "res://scenes/sprites/yellow.tscn",
@@ -124,6 +130,12 @@
 		"emotes": ["laugh", "peace", "singing"]
 	},
 	{
+		"sprite": "res://scenes/sprites/maddie.tscn",
+		"name": "Maddie",
+		"sound": "pink",
+		"sprite_flag": "float_flag"
+	},
+	{
 		"sprite": "res://scenes/sprites/gerson.tscn",
 		"name": "Old Man"
 	},
@@ -136,7 +148,8 @@
 	},
 	{
 		"sprite": "res://scenes/sprites/rouxls_kaard.tscn",
-		"name": "Rouxls Kaard"
+		"name": "Rouxls Kaard",
+		"emotes": ["appear"]
 	},
 	{
 		"sprite": "res://scenes/sprites/spamton_neo.tscn",
@@ -148,11 +161,5 @@
 	{
 		"sprite": "res://scenes/sprites/starwalker.tscn",
 		"name": "The    Original     Starwalker"
-	},
-	{
-		"sprite": "res://scenes/sprites/maddie.tscn",
-		"name": "Maddie",
-		"sound": "pink",
-		"sprite_flag": "float_flag"
 	}
 ]
