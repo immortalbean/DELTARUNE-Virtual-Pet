@@ -28,7 +28,6 @@ var sprite: AnimatedSprite2D
 var launch_velocity: Vector2 = Vector2.ZERO
 @onready var window_manager = $window_manager
 @onready var sprite_spawner = $sprite_spawner
-@onready var info = $info_loader
 @onready var sounds = $sounds
 func _ready() -> void:
 	form = randi_range(0, max_form)
@@ -88,7 +87,7 @@ func handle_random_movement():
 		if rand < 4:
 			moving = true
 			direction = directions.pick_random()
-		elif rand < 6 and len(info.emotes[form]):
+		elif rand < 6 and len(InfoLoader.emotes[form]):
 			rand_emote()
 		else:
 			moving = false
@@ -108,10 +107,10 @@ func handle_random_movement():
 func change_form(amount: int):
 	form += amount
 	form = clampi(form, 0, max_form)
-	window_manager.scale = info.default_scales[form]
+	window_manager.scale = InfoLoader.default_scales[form]
 	sprite_spawner.spawn()
 	update_visuals()
-	sounds.stream = load(info.sounds[form])
+	sounds.stream = load(InfoLoader.sounds[form])
 	window_manager.set_window_name(form)
 	update_window_size()
 func update_window_size():
@@ -135,7 +134,7 @@ func update_visuals() -> void:
 # Set the emote state and calculate the length it should play.
 func rand_emote() -> void:
 	moving = false
-	emote = info.emotes[form].pick_random()
+	emote = InfoLoader.emotes[form].pick_random()
 	if emote:
 		# Very ugly math, wish Godot gave an easier way to get the length of animations.
 		# Should be prettier when I get around to refactoring the move_timer.
