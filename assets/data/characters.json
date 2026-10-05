@@ -151,7 +151,7 @@
 	},
 	{
 		"sprite": "res://scenes/sprites/maddie.tscn",
-		"name": "maddie",
+		"name": "Maddie",
 		"sprite_flag": "float_flag"
 	}
 ]
