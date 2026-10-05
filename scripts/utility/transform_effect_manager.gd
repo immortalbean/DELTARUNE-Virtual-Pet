@@ -1,4 +1,4 @@
-# Script borrow from Novastrive.
+# Script borrowed from Novastrive.
 extends Node2D
 
 var initial_position: Vector2
