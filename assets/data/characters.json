@@ -148,5 +148,10 @@
 	{
 		"sprite": "res://scenes/sprites/starwalker.tscn",
 		"name": "The    Original     Starwalker"
+	},
+	{
+		"sprite": "res://scenes/sprites/maddie.tscn",
+		"name": "maddie",
+		"sprite_flag": "float_flag"
 	}
 ]

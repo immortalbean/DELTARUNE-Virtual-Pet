@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cruyv4rakf4gu"
+path="res://.godot/imported/maddie.aseprite-6b13d6488c05cfcaa1798f244b8bdbd0.res"
+
+[deps]
+
+source_file="res://assets/sprites/playable/maddie.aseprite"
+dest_files=["res://.godot/imported/maddie.aseprite-6b13d6488c05cfcaa1798f244b8bdbd0.res"]
+
+[params]
+

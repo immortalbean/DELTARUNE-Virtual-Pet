@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cawx3l1287xpc"]
+
+[ext_resource type="Script" uid="uid://rp5vattxledk" path="res://scripts/special/float.gd" id="1_guvr7"]
+
+[node name="float_flag" type="Node2D" unique_id=621487662]
+show_behind_parent = true
+script = ExtResource("1_guvr7")
