@@ -21,10 +21,9 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-current_tab = 1
+current_tab = 0
 
 [node name="Pets" type="ScrollContainer" parent="Tabs" unique_id=117572143]
-visible = false
 layout_mode = 2
 metadata/_tab_index = 0
 
@@ -40,6 +39,7 @@ last_wrap_alignment = 1
 layout_mode = 2
 
 [node name="Settings" type="MarginContainer" parent="Tabs" unique_id=1667853505]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 4
 theme_override_constants/margin_top = 4
@@ -78,5 +78,9 @@ value = 1.0
 [node name="MouseAvoidanceMode" type="CheckButton" parent="Tabs/Settings/SettingsScroll/SettingsList" unique_id=784383916]
 layout_mode = 2
 text = "Mouse Avoidance Mode"
+
+[node name="SavePets" type="CheckButton" parent="Tabs/Settings/SettingsScroll/SettingsList" unique_id=1309651530]
+layout_mode = 2
+text = "Save Active Pets"
 
 [editable path="Tabs/Pets/Pets/add"]
