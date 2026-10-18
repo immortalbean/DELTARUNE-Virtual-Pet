@@ -16,6 +16,8 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="DELTARUNE Desktop Pet"
 run/main_scene="uid://dbh6o1lxgpcmp"
+config/use_custom_user_dir=true
+config/custom_user_dir_name="Time Studios/DELTARUNE Desktop Pet"
 config/features=PackedStringArray("4.7", "Forward Plus")
 run/max_fps=30
 boot_splash/bg_color=Color(0, 0, 0, 0)
