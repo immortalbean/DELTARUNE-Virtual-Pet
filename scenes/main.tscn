@@ -19,6 +19,7 @@ step = 0.0
 [connection signal="pressed" from="Menu/Tabs/Pets/Pets/add/Margins/Add" to="." method="add_pet"]
 [connection signal="value_changed" from="Menu/Tabs/Settings/SettingsScroll/SettingsList/VolumeSlider" to="." method="set_volume"]
 [connection signal="value_changed" from="Menu/Tabs/Settings/SettingsScroll/SettingsList/SetThrowPower" to="." method="set_throw_power"]
+[connection signal="toggled" from="Menu/Tabs/Settings/SettingsScroll/SettingsList/MouseAvoidanceMode" to="." method="_mouse_avoidance_mode_toggled"]
 
 [editable path="Menu"]
 [editable path="Menu/Tabs/Pets/Pets/add"]

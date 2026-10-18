@@ -7,6 +7,7 @@ var pets := {}
 var pet_icons := {}
 var dragging := false
 var menu_open := false
+var avoid_mouse := false
 var next_id := 0
 var throw_power = 1.0
 
@@ -34,3 +35,5 @@ func set_volume(value: float) -> void:
 	AudioServer.set_bus_volume_linear(0, value)
 func set_throw_power(value: float) -> void:
 	throw_power = value
+func _mouse_avoidance_mode_toggled(toggled_on: bool) -> void:
+	avoid_mouse = toggled_on

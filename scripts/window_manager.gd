@@ -8,6 +8,7 @@ var kris: CharacterBody2D
 var time: float = 0.0
 var menu_open: bool = false
 var scale: float = 4.0
+var avoidance_radius: float = 0.0
 @export var context_menu: PackedScene
 @export var sounds: AudioStreamPlayer
 
@@ -34,6 +35,10 @@ func is_window_hovered(win: Window):
 	return hovered
 func tick(delta: float) -> void:
 	if not menu_open:
+		if main.avoid_mouse:
+			var relative_pos = window.get_mouse_position() - Vector2(window.size) / 2
+			if relative_pos.length_squared() <= avoidance_radius:
+				kris.launch_velocity -= relative_pos
 		time += delta
 		if Input.is_action_just_pressed("mouse_click") and is_window_hovered(window) and not main.dragging:
 			mouse_offset = kris.position - kris.get_global_mouse_position()
@@ -64,7 +69,6 @@ func tick(delta: float) -> void:
 				main.menu_open = true
 				kris.sprite.stop()
 				menu.window_manager = self
-				# Godot gets mad about integer division but just doesn't allow using floats here. :(
 				menu.position = Vector2i(kris.get_global_mouse_position()) + window.size / 2
 				menu.kris = kris
 				add_child(menu)
@@ -75,6 +79,7 @@ func set_window_name(form: int):
 	window.title = InfoLoader.names[form]
 func set_window_size(size: Vector2i):
 	window.size = size
+	avoidance_radius = (size.x * size.x + size.y * size.y) / 4.0
 func bound_position() -> void:
 	# Former logic that looks cleaner but doesn't account for the launch velocity:
 	#kris.position.x = clamp(kris.position.x, 0.0, float(DisplayServer.screen_get_size().x - DisplayServer.window_get_size().x))
